@@ -1,0 +1,1937 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Пять окончаний, умлаут-пуговки, алгоритм из четырёх вопросов, детская комната, карточки и тест. Гайд Stellas в стиле Шынгыса.">
+<meta property="og:title" content="Plural в немецком: множественное число без зубрёжки">
+<meta property="og:description" content="Пять окончаний, умлаут-пуговки, алгоритм из четырёх вопросов, детская комната, карточки и тест. Гайд Stellas в стиле Шынгыса.">
+<meta name="theme-color" content="#F6EAD6">
+<link rel="icon" href="media/logo.webp">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<link rel="preload" href="assets/fonts/amaticsc-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face { font-family: 'Amatic SC'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/amaticsc-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Amatic SC'; font-style: normal; font-weight: 700; font-display: swap; src: url(assets/fonts/amaticsc-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 300 800; font-display: swap; src: url(assets/fonts/inter-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 300 800; font-display: swap; src: url(assets/fonts/inter-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Marck Script'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/marckscript-cyrillic.woff2) format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Marck Script'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/marckscript-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+<script defer src="assets/gsap-bundle.min.js"></script>
+
+<title>Plural в немецком: множественное число без зубрёжки</title>
+<style>
+:root{
+  --or:#E2531D; --or2:#C8431A; --cr:#F6EAD5; --cr2:#EEDCBD; --pa:#FFFBF2; --note:#F4E5CA;
+  --yl:#FFC96B; --yl2:#F4B248; --red:#D8451B; --ink:#2B211B; --ink2:#5B4A3F; --nt:#1C2127;
+  --pk:#F29EA6; --bl:#5A8ED2; --gr:#7D9442; --gut:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cr);color:var(--ink);font:400 15px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+main{overflow-x:clip}
+img,video,svg{max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--gut);position:relative}
+.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.14em;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- type ---------- */
+.brush{font-family:'Amatic SC','Marker Felt',cursive;font-weight:700;text-transform:uppercase;line-height:.9;letter-spacing:.012em;-webkit-text-stroke:.05em currentColor;filter:url(#chalk);margin:0}
+.h1{font-size:clamp(64px,19vw,190px)}
+.h2{font-size:clamp(46px,13vw,104px)}
+.h3{font-size:clamp(34px,9.2vw,64px)}
+.h4{font-size:clamp(28px,7.4vw,44px)}
+.red{color:var(--red)} .ylc{color:var(--yl)} .wh{color:#fff} .ink{color:var(--ink)}
+.c{text-align:center}
+.lede{font-size:15px;line-height:1.55;max-width:36ch;margin:16px auto 0;color:var(--ink2)}
+.lede.l{margin-left:0}
+.s-or .lede,.s-nt .lede{color:#fff;opacity:.93}
+.hand{font-family:'Marck Script',cursive;font-weight:400}
+.eyebrow{font:600 11px/1.3 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;display:flex;gap:8px;align-items:center;justify-content:center;margin:0 0 16px;opacity:.85}
+.mega .wd{display:inline-block}
+.brush span,.brush b,.brush em,.brush u,.brush i{-webkit-text-stroke-width:.05em}
+.nw{white-space:nowrap}
+
+/* ---------- sections ---------- */
+section{position:relative;padding:78px 0 72px}
+.s-cr{background:var(--cr)} .s-or{background:var(--or);color:#fff} .s-yl{background:var(--yl)} .s-nt{background:var(--nt);color:#fff}
+.s-nt{background-image:
+  radial-gradient(1.3px 1.3px at 18px 26px,#fff 60%,transparent),radial-gradient(1px 1px at 70px 90px,#ffffffb0 60%,transparent),
+  radial-gradient(1.6px 1.6px at 120px 40px,#fff 60%,transparent),radial-gradient(1px 1px at 160px 130px,#fff 60%,transparent),
+  radial-gradient(1.2px 1.2px at 40px 150px,#ffffff90 60%,transparent),radial-gradient(1px 1px at 190px 10px,#fff 60%,transparent);
+  background-size:210px 170px}
+.s-wall{background:#F7EBD4;background-image:repeating-linear-gradient(90deg,transparent 0 13px,#ead8b9 13px 14px)}
+.s-dots{background:var(--yl);background-image:radial-gradient(circle,#8a3a1c 1.1px,transparent 1.6px),radial-gradient(circle,#fff6 1px,transparent 1.5px);background-size:22px 22px,22px 22px;background-position:0 0,11px 11px}
+.tear{position:absolute;left:0;top:-23px;width:100%;height:24px;display:block;pointer-events:none;z-index:3}
+.s-cr>.tear{color:var(--cr)} .s-or>.tear{color:var(--or)} .s-yl>.tear,.s-dots>.tear{color:var(--yl)} .s-nt>.tear{color:var(--nt)} .s-wall>.tear{color:#F7EBD4}
+.tear.flip{top:auto;bottom:-23px;transform:scaleY(-1)}
+
+/* ---------- topbar ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:#F6EAD5f0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px var(--gut);border-bottom:1px solid #2b211b14}
+.topbar .logo{font-size:30px;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:6px}
+.topbar .logo svg.k{width:22px;height:22px;color:var(--yl2);filter:none}
+.topbar nav{display:flex;gap:8px}
+#prog{position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--or);transform:scaleX(0);transform-origin:0 50%}
+@media (min-width:900px){.topbar{backdrop-filter:blur(6px)}}
+
+/* ---------- ui ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;font:700 15px/1.1 Inter,sans-serif;background:var(--ink);color:#fff;text-decoration:none;cursor:pointer;transition:scale .2s,background .2s;-webkit-tap-highlight-color:transparent}
+.btn:active{scale:.95}
+.btn.y{background:var(--yl);color:var(--ink)} .btn.w{background:#fff;color:var(--ink)} .btn.o{background:var(--or);color:#fff}
+.btn.ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.big{padding:17px 26px;font-size:17px}
+.btn.sm{padding:9px 14px;font-size:13px}
+.tag{display:inline-flex;align-items:center;gap:6px;border:1.5px solid currentColor;border-radius:999px;padding:5px 12px;font:600 12px/1.2 Inter,sans-serif;white-space:nowrap;text-decoration:none}
+.tag.f{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tag.y{background:var(--yl);color:var(--ink);border-color:var(--yl)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+.say{width:36px;height:36px;border-radius:50%;border:0;background:var(--ink);color:#fff;display:inline-grid;place-items:center;cursor:pointer;flex:none;font-size:16px;transition:background .2s,scale .2s}
+.say:active{scale:.9} .say.on{background:var(--or)}
+.s-or .say,.s-nt .say{background:#fff;color:var(--ink)}
+.no-tts .say{display:none}
+
+/* ---------- decor ---------- */
+svg.k{display:block;width:var(--s,56px);height:var(--s,56px);color:var(--c,var(--yl2));filter:drop-shadow(0 6px 6px #4a1e0a40);overflow:visible}
+svg.bl{display:block;width:var(--s,72px);height:calc(var(--s,72px)*2);color:var(--c,var(--gr));overflow:visible;filter:drop-shadow(0 8px 8px #4a1e0a2e)}
+.dec{position:absolute;z-index:1;pointer-events:none}
+.tap{pointer-events:auto;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bob{animation:bob 4.6s ease-in-out infinite alternate}
+.bob.d2{animation-duration:5.4s;animation-delay:-1.2s}.bob.d3{animation-duration:6.1s;animation-delay:-2.4s}
+@keyframes bob{from{translate:0 0;rotate:-3deg}to{translate:0 -14px;rotate:3deg}}
+.flap .wl{transform-box:fill-box;transform-origin:100% 50%;animation:flap .32s ease-in-out infinite alternate}
+@keyframes flap{to{transform:scaleX(.3)}}
+.bfly{display:block;width:var(--s,64px);height:auto;color:var(--c,var(--yl2));overflow:visible}
+.flw{display:block;width:var(--s,80px);height:var(--s,80px);overflow:visible}
+.spin{animation:spin 18s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+
+/* torn note */
+.note{position:relative;filter:drop-shadow(0 8px 12px #3a160629);rotate:var(--r,0deg);z-index:2}
+.note>.np{background:var(--note);color:#3a2e26;padding:18px 20px;clip-path:var(--clip,none);font-size:14px;line-height:1.5}
+.note>.np b{color:var(--ink)}
+.note.w>.np{background:#FFFBF2}
+.note.y>.np{background:#FFD98F}
+
+/* polaroid */
+.pol{margin:0;background:#FFFDF6;padding:10px 10px 2px;box-shadow:0 14px 26px #2a10052e,0 2px 4px #2a100520;rotate:var(--r,0deg);position:relative;z-index:2}
+.pol .ph{aspect-ratio:1/1;overflow:hidden;background:var(--cr2);display:block}
+.pol .ph svg{width:100%;height:100%;display:block}
+.pol figcaption{font-family:'Marck Script',cursive;font-size:22px;line-height:1.1;color:#2f2621;text-align:center;padding:10px 4px 12px}
+.pin{position:absolute;top:-10px;left:50%;width:54px;height:20px;margin-left:-27px;background:#f3e3c4cc;rotate:-4deg;z-index:3;box-shadow:0 1px 2px #0002}
+
+/* hint scribble */
+.hint{font-family:'Marck Script',cursive;font-size:19px;line-height:1.15;color:var(--ink2);display:inline-flex;flex-direction:column;align-items:center;gap:2px}
+.hint svg{width:34px;height:40px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+
+/* pl tooltip */
+.plpop{position:absolute;z-index:40;background:#FFFBF2;color:var(--ink);border-radius:18px;padding:9px 14px 10px;font:600 14px/1.25 Inter,sans-serif;box-shadow:0 10px 24px #2a100533;white-space:nowrap;pointer-events:none;translate:-50% -100%;transition:opacity .25s,scale .25s;transform-origin:50% 100%}
+.plpop small{display:block;font:400 11.5px Inter,sans-serif;color:var(--ink2);margin-top:2px}
+.plpop b{color:var(--red)}
+.plpop::after{content:"";position:absolute;left:50%;bottom:-7px;width:14px;height:14px;background:#FFFBF2;rotate:45deg;margin-left:-7px}
+.plpop.off{opacity:0;scale:.6}
+
+/* ---------- hero ---------- */
+.hero{background:var(--cr);min-height:calc(100svh - 52px);padding:96px 0 150px;text-align:center;overflow:hidden;display:flex;align-items:center}
+.hero .wrap{z-index:5}
+.hero h1{color:var(--red)}
+.hero h1 .ln{display:block;animation:drop .9s cubic-bezier(.2,1.6,.4,1) both}
+.hero h1 .ln:nth-child(2){animation-delay:.12s}
+.hero .sub{font-size:clamp(26px,7.4vw,46px);color:var(--red);margin-top:14px;animation:drop .9s .25s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes drop{from{translate:0 -60px;rotate:-4deg;opacity:0}to{translate:0 0;rotate:0deg;opacity:1}}
+.hero .lede{animation:fade .8s .45s both}
+@keyframes fade{from{opacity:0;translate:0 14px}}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px;color:var(--ink)}
+.hero .bal{position:absolute;z-index:4}
+.hero .bal.b1{left:-14px;top:11%}
+.hero .bal.b2{right:-8px;top:4%}
+.hero .bal.b3{right:-22px;top:27%}
+.hero .bal.b4{right:-16px;left:auto;top:auto;bottom:150px}
+.hero .bal .in{animation:rise 1.4s cubic-bezier(.2,1.2,.4,1) both}
+.hero .bal.b2 .in{animation-delay:.2s}.hero .bal.b3 .in{animation-delay:.35s}.hero .bal.b4 .in{animation-delay:.5s}
+@keyframes rise{from{translate:0 120vh}}
+.hero .legs{position:absolute;left:16%;top:0;width:62px;z-index:3}
+.hero .wrap{padding-top:64px}
+.legs .lg{transform-box:fill-box;transform-origin:50% 0;animation:swing 2.6s ease-in-out infinite alternate}
+.legs .lg2{animation-delay:-1.3s}
+@keyframes swing{from{transform:rotate(7deg)}to{transform:rotate(-7deg)}}
+.hero .row{position:absolute;left:0;right:0;bottom:-34px;display:flex;justify-content:center;gap:0;z-index:4}
+.hero .row .tap{margin:0 -6px}
+.hero .row .tap:nth-child(odd){translate:0 18px}
+.hero .hint{position:absolute;right:6%;top:30%;rotate:8deg;z-index:5}
+.hero .fl1{position:absolute;right:-34px;bottom:44px;z-index:3}
+.hero .fl2{position:absolute;left:-36px;bottom:120px;z-index:3}
+@media (min-width:760px){.hero .legs{left:22%;width:96px}.hero .wrap{padding-top:40px}.hero .bal.b1{left:6%}.hero .bal.b4{right:6%}.hero .bal.b3{right:12%}.hero .bal.b2{right:20%}}
+
+/* ---------- marquee ---------- */
+.band-wrap{position:relative;z-index:6;overflow:hidden;padding:14px 0;margin:-36px 0 -30px}
+.band{background:var(--yl);color:var(--red);rotate:-2.2deg;margin:0 -30px;padding:10px 0 6px;white-space:nowrap;overflow:hidden;box-shadow:0 8px 18px #3a16062a}
+.band.or{background:var(--or);color:#fff;rotate:1.6deg}
+.track{display:inline-flex;animation:mq 32s linear infinite}
+.track>span{display:inline-flex;align-items:center;gap:18px;padding-right:18px;font-size:34px}
+.track svg.k{width:26px;height:26px;filter:none}
+html.gs .track{animation:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- route ---------- */
+.rt-scroll{overflow-x:auto;margin:30px calc(var(--gut)*-1) 0;padding:6px var(--gut) 16px;scrollbar-width:none}
+.rt-scroll::-webkit-scrollbar{display:none}
+.rt{position:relative;display:flex;gap:6px;width:max-content}
+.rt .thread{position:absolute;left:44px;right:44px;top:38px;height:4px;background:repeating-linear-gradient(90deg,#8d2c14 0 10px,transparent 10px 18px);opacity:.25}
+.rt .thread i{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#8d2c14 0 10px,transparent 10px 18px);transform-origin:0 50%}
+.stop{position:relative;width:96px;text-align:center;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center}
+.stop .dot{position:relative;width:76px;height:76px}
+.stop .dot svg.k{--s:76px}
+.stop .dot b{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;color:#fff;pointer-events:none;-webkit-text-stroke:.06em #fff;text-shadow:0 2px 0 #0003}
+.stop span{display:block;margin-top:8px;font:600 12px/1.25 Inter,sans-serif;max-width:12ch}
+
+/* ---------- delivery (core) ---------- */
+.deliv{position:relative;max-width:540px;margin:26px auto 0;padding-top:4px}
+.bals{display:flex;justify-content:space-between;padding:0 4px;position:relative;z-index:4}
+.eb{position:relative;width:19%;max-width:92px;border:0;background:none;padding:0;cursor:pointer}
+.eb svg.bl{--s:100%;width:100%;height:auto;aspect-ratio:1/2}
+.eb .lab{position:absolute;left:0;right:0;top:16%;font-size:clamp(24px,7vw,40px);color:#fff;-webkit-text-stroke:.05em #fff;pointer-events:none;text-shadow:0 2px 0 #0002}
+.eb.dk .lab{color:var(--ink);-webkit-text-stroke-color:var(--ink);text-shadow:none}
+.eb.on{z-index:6}
+.wcard{position:relative;margin:-28px auto 0;max-width:440px}
+.wcard .np{padding:26px 16px 20px;text-align:center;min-height:150px}
+.word{font-size:clamp(44px,13vw,80px);color:var(--red);display:inline-flex;align-items:flex-end;gap:.18em;white-space:nowrap;justify-content:center}
+.word .art{color:var(--ink);-webkit-text-stroke-color:var(--ink);font-size:.62em;margin-bottom:.06em}
+.word .end{display:inline-block;color:var(--or);-webkit-text-stroke-color:var(--or);transition:max-width .35s,opacity .35s;max-width:3em;overflow:visible}
+.word .end.hide{max-width:0;opacity:0}
+.word .end.zero{color:#b9a58c;-webkit-text-stroke-color:#b9a58c}
+.uv{position:relative;display:inline-block}
+.uv .dots{position:absolute;left:50%;top:-.16em;width:.62em;margin-left:-.31em;display:flex;justify-content:space-between;pointer-events:none}
+.uv .dots svg{width:.24em;height:.24em;color:var(--bl);filter:none;display:block}
+.uv .dots svg+svg{color:var(--pk)}
+.uv:not(.on) .dots{visibility:hidden}
+.wru{margin:10px 0 0;font:500 14px Inter,sans-serif;color:var(--ink2)}
+.dcap{max-width:440px;margin:18px auto 0;min-height:4.8em;text-align:center;font-size:15px}
+.dcap b{color:var(--red)}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px}
+.ctrl .say{background:var(--ink);color:#fff}
+.sdots{display:flex;gap:6px}
+.sdots i{width:12px;height:12px;border-radius:50%;background:#2b211b26;transition:background .3s}
+.sdots i.on{background:var(--or)}
+.rbtn{width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);background:transparent;display:grid;place-items:center;cursor:pointer;font-size:18px}
+
+/* article die */
+.arts{display:flex;justify-content:center;gap:4px;margin:30px auto 0;max-width:420px}
+.ab{position:relative;width:31%;max-width:118px}
+.ab svg.bl{--s:100%;width:100%;height:auto;aspect-ratio:1/2}
+.ab .flip{position:absolute;left:0;right:0;top:15%;font-size:clamp(30px,9vw,46px);color:#fff;-webkit-text-stroke-color:#fff;justify-content:center}
+.flip{display:inline-flex}
+.flip .fl{position:relative;display:inline-block}
+.flip .fl i{font-style:normal;display:inline-block;transition:transform .45s cubic-bezier(.3,1.5,.5,1),opacity .3s}
+.flip .fl .fb{position:absolute;left:0;top:0;transform:translateY(-60%) rotate(-12deg);opacity:0}
+.flip.to .fl .fa{transform:translateY(60%) rotate(12deg);opacity:0}
+.flip.to .fl .fb{transform:none;opacity:1}
+.flip .fl .fb:empty,.flip .fl .fa:empty{width:0}
+.flip .fl.ad{max-width:.8em;transition:max-width .4s cubic-bezier(.3,1.3,.5,1)}
+.flip:not(.to) .fl.ad{max-width:0}
+.flip .fl.ad .fb{position:static}
+.ex3{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.chipw{display:inline-flex;align-items:center;gap:8px;background:#FFFBF2;border-radius:999px;padding:5px 6px 5px 14px;font:600 14px Inter,sans-serif;box-shadow:0 4px 10px #3a160614}
+.chipw .say{width:30px;height:30px;font-size:14px}
+.chipw em{font-style:normal;color:var(--red)}
+
+/* ---------- kids (endings as characters) ---------- */
+.kids{display:grid;gap:26px;margin-top:34px}
+.kid .np{padding:20px 18px 18px}
+.kid .top{display:flex;align-items:center;gap:12px}
+.kid .end{font-size:58px;color:var(--red);min-width:1.6em;text-align:center}
+.kid .nm{flex:1}
+.kid .nm b{display:block;font:800 17px/1.2 Inter,sans-serif;color:var(--ink)}
+.kid .nm small{font:500 12px Inter,sans-serif;color:var(--ink2)}
+.kid .num{font-size:30px;color:#c9b393}
+.kid .ti{width:42px;height:42px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font-size:20px;flex:none}
+.kid p{margin:10px 0 12px;font-size:14px}
+.kid ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.kid li{display:flex;align-items:center;gap:10px;font:600 14px Inter,sans-serif;color:var(--ink)}
+.kid li span{flex:1}
+.kid li em{font-style:normal;color:var(--red)}
+.kid li .say{width:30px;height:30px;font-size:14px;background:var(--ink);color:#fff}
+.kid .uml{margin-top:12px;display:inline-flex;align-items:center;gap:6px;font:600 12px Inter,sans-serif;background:#2b211b0f;border-radius:999px;padding:5px 10px}
+.kid .uml svg.k{--s:16px;filter:none}
+@media (min-width:760px){.kids{grid-template-columns:1fr 1fr}.kid:last-child{grid-column:1/-1;max-width:520px;justify-self:center;width:100%}}
+@media (min-width:1040px){.kids{grid-template-columns:1fr 1fr 1fr}.kid:nth-child(4){grid-column:auto}.kid:last-child{grid-column:auto;max-width:none}}
+.s-nt .bf1{position:absolute;right:-6px;top:24px;z-index:3}
+.s-nt .bf2{position:absolute;left:-10px;bottom:30px;z-index:3}
+
+/* ---------- umlaut lab ---------- */
+.ulab{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.ut{position:relative;border:0;padding:0;background:none;cursor:pointer;text-align:center}
+.ut .np{padding:28px 8px 14px;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.ut .sg{font:500 12.5px Inter,sans-serif;color:var(--ink2)}
+.ut .pw{font-size:clamp(38px,11vw,58px);color:var(--red);margin-top:6px;white-space:nowrap}
+.ut .pw .end{color:var(--or);-webkit-text-stroke-color:var(--or);display:inline-block}
+.ut .pw .end.hide{opacity:0}
+.ut .art2{font:700 12px Inter,sans-serif;color:var(--ink);margin-top:2px}
+.ut.no .pw .uv .dots{display:none}
+.ut .why{font:500 11.5px/1.3 Inter,sans-serif;color:var(--ink2);margin-top:6px}
+.urules{display:grid;gap:14px;margin-top:30px}
+.urules .note .np{display:flex;gap:12px;align-items:flex-start}
+.urules svg.k{--s:30px;flex:none;filter:none}
+@media (min-width:760px){.ulab{grid-template-columns:repeat(4,1fr)}.urules{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- flow ---------- */
+.flow{max-width:560px;margin:30px auto 0}
+.fq{display:block;width:max-content;max-width:100%;margin:0 auto 18px;font-size:clamp(40px,11vw,62px);color:var(--ink);background:#FFFBF2;padding:8px 22px 4px;border-radius:14px;rotate:-2deg;box-shadow:0 8px 18px #3a16062e;-webkit-text-stroke-color:var(--ink)}
+.fn{position:relative;display:flex;align-items:center;gap:12px;background:var(--note);color:var(--ink);border-radius:16px;padding:12px 12px 12px 14px;transition:background .3s,opacity .3s,scale .3s}
+.fn .n{font-size:30px;color:var(--red);width:22px;text-align:center}
+.fn .q{flex:1;font:600 14px/1.35 Inter,sans-serif}
+.fn .q small{display:block;font-weight:400;font-size:12px;color:var(--ink2);margin-top:2px}
+.fn .res{font-size:30px;min-width:64px;text-align:center;background:var(--ink);color:#fff;-webkit-text-stroke-color:#fff;border-radius:12px;padding:6px 8px 2px}
+.fn.chk{scale:1.02;background:#FFFBF2}
+.fn.miss{opacity:.5}
+.fn.hit{background:var(--yl);scale:1.03}
+.fn.hit .res{background:var(--red)}
+.fno{display:flex;align-items:center;gap:6px;justify-content:flex-start;padding:4px 0 4px 22px;font:600 12px Inter,sans-serif;color:#fff;opacity:.5;transition:opacity .3s}
+.fno.on{opacity:1}
+.fno svg{transform:rotate(90deg)}
+.fa{margin:18px auto 0;text-align:center;font-size:clamp(34px,9vw,50px);color:var(--yl);-webkit-text-stroke-color:var(--yl);min-height:1em;opacity:.25;transition:opacity .3s}
+.fa.on{opacity:1}
+
+/* ---------- factory ---------- */
+.fab{position:relative;max-width:420px;margin:30px auto 0;text-align:center}
+.slot{min-height:58px;display:flex;justify-content:center;align-items:center}
+.wchip{display:inline-flex;align-items:center;gap:6px;background:#FFFBF2;border-radius:14px;padding:10px 16px;font:700 17px Inter,sans-serif;box-shadow:0 6px 14px #3a160622;white-space:nowrap}
+.wchip em{font-style:normal;color:var(--or);background:#ffe1a8;border-radius:6px;padding:0 3px}
+.wchip.out{background:var(--yl)}
+.mach{position:relative;width:230px;height:180px;margin:6px auto}
+.mach svg{width:100%;height:100%;overflow:visible}
+.mach.work .mbody{animation:shake .5s}
+@keyframes shake{20%{transform:translate(-3px,1px) rotate(-1deg)}40%{transform:translate(3px,-1px) rotate(1deg)}60%{transform:translate(-2px,0)}80%{transform:translate(2px,1px)}}
+.mach .gear{transform-box:fill-box;transform-origin:center;animation:spin 6s linear infinite}
+.mach.work .gear{animation-duration:.8s}
+.mach .puff{opacity:0}
+.mach.work .puff{animation:puff 1s ease-out}
+@keyframes puff{0%{opacity:.9;transform:translate(0,0) scale(.5)}100%{opacity:0;transform:translate(6px,-34px) scale(1.4)}}
+.mlog{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:14px;min-height:34px}
+.mlog span{font:600 12.5px Inter,sans-serif;background:#2b211b0d;border-radius:999px;padding:5px 10px}
+.mlog span em{font-style:normal;color:var(--red)}
+.sufg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:34px}
+.suf{background:#FFFBF2;border-radius:14px;padding:12px 12px 10px;box-shadow:0 4px 10px #3a160612;rotate:var(--r,0deg)}
+.suf .sx{font-size:30px;color:var(--red);line-height:1}
+.suf .to{font:800 13px Inter,sans-serif;margin-top:4px;color:var(--ink)}
+.suf .eg{font:400 12px/1.35 Inter,sans-serif;color:var(--ink2);margin-top:3px}
+@media (min-width:760px){.sufg{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- gender panels ---------- */
+.gps{display:grid;gap:18px;margin-top:30px}
+.gp{position:relative;border-radius:22px;padding:22px 18px 18px;overflow:hidden}
+.gp.n{background:var(--nt);color:#fff}
+.gp.y{background:var(--yl);color:var(--ink)}
+.gp.o{background:var(--or);color:#fff}
+.gp .ghost{position:absolute;right:-6px;top:-18px;font-size:150px;opacity:.12;pointer-events:none;line-height:.8}
+.gp .gh{display:flex;align-items:center;justify-content:space-between;gap:8px;position:relative}
+.gp .gh .tag{font-size:12px}
+.gp .morph{display:flex;align-items:baseline;gap:.25em;font-size:clamp(46px,13vw,76px);margin:16px 0 10px;min-height:1em;white-space:nowrap}
+.gp .morph .ma{font-size:.55em;opacity:.8}
+.gp.y .morph{color:var(--red)}
+.spec{margin:0;display:grid}
+.spec>div{display:grid;grid-template-columns:38% 1fr;gap:10px;padding:9px 0;border-top:1px solid currentColor;border-color:#ffffff40}
+.gp.y .spec>div{border-color:#2b211b2a}
+.spec dt{font:700 13px/1.35 Inter,sans-serif}
+.spec dd{margin:0;font:400 13px/1.4 Inter,sans-serif;opacity:.92}
+@media (min-width:900px){.gps{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- traps (letters) ---------- */
+.envs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.env{position:relative;border:0;background:none;padding:0;cursor:pointer;aspect-ratio:1.45/1;perspective:500px}
+.env .eb2{position:absolute;inset:0;background:#F3E3C6;border-radius:4px;box-shadow:0 8px 14px #00000040}
+.env .eb2::before{content:"";position:absolute;inset:0;background:linear-gradient(150deg,transparent 49.5%,#d8c29d 50%,transparent 51%),linear-gradient(210deg,transparent 49.5%,#d8c29d 50%,transparent 51%)}
+.env .flp{position:absolute;left:0;right:0;top:0;height:58%;background:#EBD6B2;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transition:transform .5s cubic-bezier(.3,1.3,.5,1);z-index:2}
+.env .seal{position:absolute;left:50%;top:44%;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#d4473b,#8e1d16 70%);box-shadow:0 2px 3px #0005;z-index:3;transition:opacity .3s;display:grid;place-items:center;font:700 11px Inter,sans-serif;color:#ffd9cf}
+.env .lt{position:absolute;bottom:6px;left:8px;right:8px;font:600 11px/1.2 Inter,sans-serif;color:#5b4637;text-align:center;z-index:1}
+.env.open .flp{transform:rotateX(180deg);background:#e1c79c}
+.env.open .seal{opacity:0}
+.env.act .eb2{box-shadow:0 0 0 3px var(--yl),0 8px 14px #00000040}
+.letter{margin-top:26px}
+.letter .np{background:#FFFBF2;padding:24px 20px 20px;min-height:220px}
+.letter .lh{font-size:clamp(34px,9vw,52px);color:var(--red)}
+.letter .lk{font:600 11px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.letter .pairs{display:grid;gap:8px;margin-top:14px}
+.letter .pairs div{display:flex;align-items:center;gap:10px;background:#f4e9d4;border-radius:12px;padding:8px 8px 8px 12px;font:600 14px/1.3 Inter,sans-serif}
+.letter .pairs div span{flex:1}
+.letter .pairs em{font-style:normal;color:var(--red)}
+.letter .pairs small{display:block;font-weight:400;color:var(--ink2);font-size:12px}
+.letter .joke{margin-top:14px;font-family:'Marck Script',cursive;font-size:21px;line-height:1.2;color:#3b2f27}
+@media (min-width:760px){.envs{grid-template-columns:repeat(6,1fr)}}
+
+/* ---------- room ---------- */
+.roomw{position:relative;max-width:560px;margin:26px auto 0}
+.room{display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 18px 40px #3a16063a;background:#F8EEDC;touch-action:manipulation}
+.room .obj{cursor:pointer;-webkit-tap-highlight-color:transparent;outline:none}
+.room .obj .hl{fill:none;stroke:#fff;stroke-width:3;stroke-dasharray:6 6;opacity:0;transition:opacity .3s}
+.room .obj:hover .hl,.room .obj:focus-visible .hl{opacity:.9}
+.room .obj.got .chk{opacity:1}
+.room .chk{opacity:0;transition:opacity .3s}
+.room .obj .pulse{transform-box:fill-box;transform-origin:center;animation:pul 2.4s ease-in-out infinite}
+.room .obj.got .pulse{animation:none;opacity:0}
+@keyframes pul{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.85;transform:scale(1)}}
+.rcard{margin-top:-18px;position:relative;z-index:3}
+.rcard .np{background:#FFFBF2;padding:22px 18px 18px}
+.rcard .rw{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rcard .pair{font-size:clamp(34px,9.4vw,52px);color:var(--red);flex:1;min-width:0}
+.rcard .pair .ar{color:var(--ink2);-webkit-text-stroke-color:var(--ink2);margin:0 .12em}
+.rcard .rule{margin:8px 0 0;font-size:14px}
+.rcard .rule .tag{margin-right:6px;vertical-align:1px}
+.found{display:flex;align-items:center;gap:10px;margin-top:14px;font:600 13px Inter,sans-serif}
+.found .fd{display:flex;gap:4px;flex-wrap:wrap}
+.found .fd i{width:12px;height:12px;border-radius:50%;background:#2b211b1f;transition:background .3s}
+.found .fd i.on{background:var(--or)}
+
+.room .flame path{transform-box:fill-box;transform-origin:50% 100%;animation:flick .45s ease-in-out infinite alternate}
+.room .flame path:nth-child(2){animation-delay:-.2s}.room .flame path:nth-child(3){animation-delay:-.3s}
+@keyframes flick{to{transform:scaleY(.78) scaleX(1.12)}}
+
+/* ---------- flash buttons ---------- */
+.fcs{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;margin-top:30px}
+.fc{border:0;padding:0;background:none;cursor:pointer;perspective:700px;aspect-ratio:1/1;-webkit-tap-highlight-color:transparent}
+.fci{display:block;position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:rotate .6s cubic-bezier(.3,1.3,.5,1)}
+.fc.on .fci{rotate:y 180deg}
+.fcf,.fcb{position:absolute;inset:0;border-radius:50%;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14%;text-align:center}
+.fcf{background:radial-gradient(circle at 36% 30%,#ffffff55,transparent 45%),var(--c,var(--or));color:#fff;box-shadow:inset 0 -8px 0 #00000022,0 10px 16px #3a160633}
+.fcf::before{content:"";position:absolute;inset:9%;border-radius:50%;border:2px dashed #ffffff8c}
+.fcf b{font-size:clamp(26px,7.6vw,40px);-webkit-text-stroke:.05em currentColor;line-height:.95}
+.fcf small{font:600 11px Inter,sans-serif;opacity:.85;margin-top:4px}
+.fcf.dk{color:var(--ink)}
+.fcf.dk::before{border-color:#2b211b66}
+.fcb{background:#FFFBF2;rotate:y 180deg;box-shadow:0 10px 16px #3a160633;color:var(--ink)}
+.fcb b{font-size:clamp(26px,7.6vw,40px);color:var(--red);line-height:.95}
+.fcb small{font:500 11px/1.3 Inter,sans-serif;color:var(--ink2);margin-top:6px}
+.fcount{text-align:center;margin-top:18px;font:600 13px Inter,sans-serif}
+@media (min-width:760px){.fcs{grid-template-columns:repeat(5,1fr)}}
+
+/* ---------- quiz ---------- */
+.qz{position:relative;max-width:560px;margin:28px auto 0}
+.qz .np{background:#FFFBF2;padding:22px 18px 20px;min-height:300px;color:var(--ink)}
+.qbar{display:flex;gap:6px;margin-bottom:14px}
+.qbar i{flex:1;height:6px;border-radius:9px;background:#2b211b1a}
+.qbar i.cur{background:var(--yl2)} .qbar i.ok{background:#5c9a3a} .qbar i.bad{background:var(--red)}
+.qn{font:600 11px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0}
+.qq{font-size:clamp(34px,9vw,50px);color:var(--ink);margin:10px 0 6px;-webkit-text-stroke-color:var(--ink)}
+.qq u{text-decoration:none;color:var(--red);-webkit-text-stroke-color:var(--red);border-bottom:3px dashed currentColor}
+.qh{font:500 13px Inter,sans-serif;color:var(--ink2);margin:0 0 14px}
+.qo{display:grid;gap:8px}
+.qo button{border:2px solid var(--ink);background:#fff;border-radius:14px;padding:13px 14px;font:700 16px Inter,sans-serif;text-align:left;cursor:pointer;transition:background .2s,color .2s}
+.qo button.ok{background:#5c9a3a;border-color:#5c9a3a;color:#fff}
+.qo button.bad{background:var(--red);border-color:var(--red);color:#fff}
+.qo button:disabled{cursor:default}
+.qx{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px;background:#f4e9d4;border-radius:12px;padding:12px}
+.qx.bad{background:#fbe0d6}
+.qx svg{font-size:18px;margin-top:1px}
+.qnext{margin-top:14px}
+.qres{text-align:center;padding-top:10px}
+.qres .score{font-size:90px;color:var(--red);line-height:1}
+.conf{position:absolute;left:50%;top:40%;width:14px;height:14px;border-radius:50%;pointer-events:none;z-index:9;box-shadow:inset -2px -2px 0 #0002}
+
+/* ---------- cheat ---------- */
+.cheat{display:grid;gap:14px;margin-top:30px}
+.cr{display:flex;gap:12px;align-items:center;background:#FFFBF2;border-radius:16px;padding:12px 14px;box-shadow:0 4px 10px #3a160612;rotate:var(--r,0deg)}
+.cr .ci{width:44px;height:44px;flex:none;position:relative}
+.cr .ci svg.k{--s:44px;filter:none}
+.cr .ci b{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:20px;-webkit-text-stroke:.05em #fff}
+.cr .ct{flex:1;font:600 14px/1.35 Inter,sans-serif}
+.cr .ct small{display:block;font-weight:400;color:var(--ink2);font-size:12.5px;margin-top:2px}
+.cr .cend{font-size:30px;color:var(--red);white-space:nowrap}
+.final-q{margin-top:44px}
+@media (min-width:760px){.cheat{grid-template-columns:1fr 1fr}}
+
+/* ---------- story ---------- */
+.story{display:grid;gap:8px;margin-top:34px}
+.sitem{display:grid;grid-template-columns:44% 1fr;gap:10px;align-items:center}
+.sitem:nth-child(even){grid-template-columns:1fr 44%}
+.sitem:nth-child(even) .pol{order:2}
+.sitem .note .np{font-size:13.5px;padding:16px}
+.ps{margin:22px auto 0;max-width:330px}
+@media (min-width:860px){.story{grid-template-columns:repeat(3,1fr);gap:26px}.sitem,.sitem:nth-child(even){grid-template-columns:1fr;gap:0}.sitem:nth-child(even) .pol{order:0}.sitem .note{margin:-20px 10px 0}}
+
+/* ---------- ad ---------- */
+.plat .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:28px}
+.num{text-align:center;background:#FFFBF2;color:var(--ink);border-radius:18px;padding:14px 6px 12px;rotate:var(--r,0deg)}
+.num b{display:block;font-family:'Amatic SC',cursive;font-size:clamp(40px,11vw,64px);line-height:.9;color:var(--red);-webkit-text-stroke:.05em var(--red)}
+.num span{font:600 11.5px/1.25 Inter,sans-serif;display:block;margin-top:4px}
+.pains{display:grid;gap:20px;margin-top:34px}
+.pains h4{font-size:40px;margin-bottom:10px}
+.pains ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pains li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45}
+.pains li svg{font-size:18px;margin-top:1px;flex:none;color:var(--red)}
+.pains .yes li svg{color:#4f8a33}
+@media (min-width:860px){.pains{grid-template-columns:1fr 1fr}}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;margin-top:34px}
+.feat .pol{padding:8px 8px 0}
+.feat .pol .ph{aspect-ratio:1/.8;display:grid;place-items:center;background:var(--c,var(--or));color:#fff;position:relative}
+.feat .pol .ph svg.ic{width:44px;height:44px;stroke-width:1.6}
+.feat .pol .ph .kk{position:absolute;right:6px;bottom:6px}
+.feat .pol figcaption{font-size:19px;padding:8px 2px 4px}
+.feat .pol p{margin:0 0 10px;font:400 12px/1.35 Inter,sans-serif;color:var(--ink2);text-align:center;padding:0 4px}
+@media (min-width:860px){.feat{grid-template-columns:repeat(4,1fr)}}
+.showcase{display:grid;gap:26px;margin-top:40px;align-items:start}
+.phone{width:min(260px,72vw);margin:0 auto;border-radius:36px;background:#111;padding:10px;box-shadow:0 20px 40px #0005}
+.phone video{display:block;width:100%;border-radius:27px;aspect-ratio:9/19.5;object-fit:cover;background:#222}
+.browser{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 18px 36px #3a160640}
+.browser .bar{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#efe6d6}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#e0623f}
+.browser .bar i+i{background:#f2b33d}.browser .bar i+i+i{background:#7d9442}
+.browser .bar span{font:600 11px Inter,sans-serif;color:var(--ink2);margin-left:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser video{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#eee}
+.fcap{font-size:13.5px;margin:12px 0 0;color:inherit}
+.frames{display:grid;gap:26px}
+@media (min-width:860px){.showcase{grid-template-columns:300px 1fr}}
+.gem{display:grid;gap:18px;margin-top:44px}
+.gem .spec>div{border-color:#2b211b22}
+@media (min-width:860px){.gem{grid-template-columns:1fr 1.2fr;align-items:start}}
+.shots{display:flex;gap:12px;overflow-x:auto;margin:30px calc(var(--gut)*-1) 0;padding:8px var(--gut) 18px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.shots::-webkit-scrollbar{display:none}
+.shot{flex:none;width:78%;max-width:420px;margin:0;scroll-snap-align:center;background:#FFFDF6;padding:8px 8px 2px;box-shadow:0 10px 20px #3a160630;rotate:var(--r,0deg)}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/10.5;object-fit:cover;object-position:top}
+.shot figcaption{font-family:'Marck Script',cursive;font-size:20px;text-align:center;padding:6px 0 8px;color:var(--ink)}
+.revs{display:flex;gap:12px;overflow-x:auto;margin:20px calc(var(--gut)*-1) 0;padding:8px var(--gut) 18px;scroll-snap-type:x mandatory;scrollbar-width:none;align-items:flex-start}
+.revs::-webkit-scrollbar{display:none}
+.revs img{flex:none;width:84%;max-width:440px;scroll-snap-align:center;border-radius:14px;box-shadow:0 10px 20px #0003;height:auto}
+.ladder{margin-top:44px;background:#FFFBF2;border-radius:22px;padding:18px 14px 14px;color:var(--ink)}
+.ladder h5{margin:0 0 10px;font:700 13px Inter,sans-serif;display:flex;gap:8px;align-items:center}
+.steps{position:relative;display:flex;align-items:flex-end;gap:6px;height:190px;padding-top:40px}
+.step{flex:1;border-radius:14px 14px 4px 4px;display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-family:'Amatic SC',cursive;font-weight:700;font-size:28px;color:#fff;-webkit-text-stroke:.04em currentColor;transform-origin:50% 100%}
+.me{position:absolute;left:0;top:0;width:34px;height:34px;z-index:3}
+.me svg.k{--s:34px}
+.prices{display:grid;gap:18px;margin-top:30px}
+.price{position:relative;border-radius:24px;padding:22px 18px 20px;overflow:hidden}
+.price.a{background:var(--yl);color:var(--ink)}
+.price.b{background:var(--nt);color:#fff}
+.price.c{background:#FFFBF2;color:var(--ink);box-shadow:0 0 0 3px var(--ink)}
+.price .ghost{position:absolute;right:-4px;top:-26px;font-family:'Amatic SC',cursive;font-weight:700;font-size:170px;opacity:.12;line-height:1}
+.price h3{font-size:56px}
+.price .pills{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.price .amount{font-family:'Amatic SC',cursive;font-weight:700;font-size:72px;line-height:1;-webkit-text-stroke:.04em currentColor}
+.price .amount s{font-size:.5em;opacity:.55}
+.price .spec>div{border-color:currentColor;border-top-color:#8884}
+.price .btn{margin-top:14px;width:100%}
+.price .ribbon{position:absolute;right:-36px;top:20px;rotate:40deg;background:var(--or);color:#fff;font:800 12px Inter,sans-serif;padding:6px 40px;letter-spacing:.06em;text-transform:uppercase}
+@media (min-width:900px){.prices{grid-template-columns:1fr 1fr 1.1fr;align-items:stretch}}
+.fine{font-size:12.5px;line-height:1.5;margin:18px 0 0;opacity:.85}
+.final{text-align:center}
+.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:70;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--ink);color:#fff;border-radius:999px;padding:8px 8px 8px 18px;box-shadow:0 12px 30px #0006;translate:0 140%;transition:translate .45s cubic-bezier(.3,1.3,.5,1)}
+.dock.show{translate:0 0}
+.dock p{margin:0;font:500 12px/1.2 Inter,sans-serif}
+.dock p b{display:block;font-family:'Amatic SC',cursive;font-size:28px;line-height:.9}
+@media (min-width:700px){.dock{left:50%;right:auto;width:520px;margin-left:-260px}}
+
+footer{background:var(--ink);color:#f6ead5b0;font:500 12px Inter,sans-serif;padding:22px 0 90px}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* reveal fallback */
+.rv,.stg>*{transition:translate .8s cubic-bezier(.2,1,.3,1),rotate .8s}
+html:not(.gs) .rv:not(.in){translate:0 30px}
+html:not(.gs) .stg:not(.in)>*{translate:0 24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <filter id="chalk" x="-3%" y="-8%" width="106%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <radialGradient id="gK" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".34"/></radialGradient>
+  <radialGradient id="gB" cx="34%" cy="28%" r="78%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".33" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></radialGradient>
+  <pattern id="stripe" width="12" height="14" patternUnits="userSpaceOnUse"><rect width="12" height="14" fill="#FFF6E6"/><rect width="12" height="7" fill="#D8451B"/></pattern>
+  <pattern id="cstripe" width="6" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><rect width="6" height="8" fill="#fff"/><rect width="6" height="4" fill="#5A8ED2"/></pattern>
+</defs>
+<symbol id="k4" viewBox="-50 -50 100 100">
+  <circle r="47" fill="currentColor"/><circle r="47" fill="url(#gK)"/>
+  <circle r="35" fill="#000" fill-opacity=".07"/>
+  <circle r="35" cx="-1" cy="-1.5" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2"/>
+  <circle r="35" cx="1" cy="1.5" fill="none" stroke="#000" stroke-opacity=".14" stroke-width="2"/>
+  <g fill="#2a1a12" fill-opacity=".82"><circle cx="-11" cy="-11" r="6.5"/><circle cx="11" cy="-11" r="6.5"/><circle cx="-11" cy="11" r="6.5"/><circle cx="11" cy="11" r="6.5"/></g>
+  <g fill="#fff" fill-opacity=".35"><circle cx="-9.5" cy="-8.5" r="2.2"/><circle cx="12.5" cy="-8.5" r="2.2"/><circle cx="-9.5" cy="13.5" r="2.2"/><circle cx="12.5" cy="13.5" r="2.2"/></g>
+  <ellipse cx="-14" cy="-26" rx="13" ry="6" fill="#fff" fill-opacity=".38" transform="rotate(-28 -14 -26)"/>
+</symbol>
+<symbol id="k2" viewBox="-50 -50 100 100">
+  <circle r="47" fill="currentColor"/><circle r="47" fill="url(#gK)"/>
+  <circle r="34" fill="#000" fill-opacity=".08"/>
+  <circle r="34" cx="-1" cy="-1.5" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+  <g fill="#2a1a12" fill-opacity=".82"><circle cx="-12" cy="0" r="7.5"/><circle cx="12" cy="0" r="7.5"/></g>
+  <g fill="#fff" fill-opacity=".4"><circle cx="-10" cy="3" r="2.6"/><circle cx="14" cy="3" r="2.6"/></g>
+  <ellipse cx="-14" cy="-26" rx="13" ry="6" fill="#fff" fill-opacity=".38" transform="rotate(-28 -14 -26)"/>
+</symbol>
+<symbol id="k0" viewBox="-50 -50 100 100">
+  <circle r="47" fill="currentColor"/><circle r="47" fill="url(#gK)"/>
+  <circle r="36" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.4" stroke-dasharray="5 5"/>
+  <ellipse cx="-14" cy="-28" rx="12" ry="5" fill="#fff" fill-opacity=".35" transform="rotate(-28 -14 -28)"/>
+</symbol>
+<symbol id="bl" viewBox="0 0 100 200">
+  <path d="M50 4C24 4 6 26 6 52c0 30 24 54 44 58 20-4 44-28 44-58C94 26 76 4 50 4z" fill="currentColor"/>
+  <path d="M50 4C24 4 6 26 6 52c0 30 24 54 44 58 20-4 44-28 44-58C94 26 76 4 50 4z" fill="url(#gB)"/>
+  <path d="M43 116l7-7 7 7-7 4z" fill="currentColor"/><path d="M43 116l7-7 7 7-7 4z" fill="#000" fill-opacity=".2"/>
+  <ellipse cx="32" cy="30" rx="9" ry="16" fill="#fff" fill-opacity=".5" transform="rotate(-25 32 30)"/>
+  <path d="M50 120c-10 9 10 17 0 27s-12 17 2 26 4 19-2 25" fill="none" stroke="#9b2d18" stroke-width="2.2" stroke-linecap="round"/>
+</symbol>
+<symbol id="tear" viewBox="0 0 1200 30" preserveAspectRatio="none"><path fill="#fff" fill-opacity=".6" d="M0 30 L0 4.3 L23 11.5 L36 7.6 L52 8.6 L74 5.4 L83 12.8 L98 11.7 L106 6.8 L127 6.3 L152 11.4 L161 2.7 L179 12.3 L194 6.0 L209 1.9 L221 6.5 L238 5.3 L250 6.0 L267 5.5 L275 11.7 L293 9.2 L304 13.5 L328 3.8 L342 11.5 L363 13.0 L378 9.9 L398 4.9 L417 12.4 L440 7.0 L459 3.9 L471 9.7 L486 4.0 L504 10.3 L525 7.5 L540 9.6 L562 7.1 L578 9.3 L586 2.5 L607 11.4 L625 6.7 L636 9.0 L662 9.6 L680 10.2 L692 7.5 L717 8.8 L733 6.1 L751 13.0 L759 11.7 L782 11.3 L803 11.3 L821 9.5 L836 4.7 L860 8.2 L872 8.7 L888 6.6 L903 8.9 L922 8.0 L938 2.1 L950 6.2 L969 12.5 L991 11.5 L1014 4.1 L1037 8.9 L1047 3.6 L1055 11.4 L1067 3.6 L1087 5.4 L1096 3.3 L1113 5.1 L1126 9.0 L1142 5.7 L1159 3.3 L1174 5.8 L1185 4.9 L1200 6.3 L1200 30Z"/><path fill="currentColor" d="M0 30 L0 7.3 L23 13.6 L36 11.0 L52 12.5 L74 6.9 L83 14.4 L98 13.6 L106 10.5 L127 8.3 L152 15.0 L161 6.3 L179 15.4 L194 8.2 L209 6.3 L221 10.4 L238 8.3 L250 8.2 L267 8.9 L275 14.4 L293 12.4 L304 15.9 L328 7.2 L342 13.2 L363 15.4 L378 14.3 L398 9.0 L417 14.8 L440 11.1 L459 6.3 L471 14.0 L486 7.7 L504 13.0 L525 9.7 L540 11.1 L562 11.2 L578 10.9 L586 6.4 L607 15.8 L625 9.9 L636 11.0 L662 13.7 L680 14.6 L692 11.1 L717 11.8 L733 8.7 L751 15.6 L759 13.8 L782 14.9 L803 14.1 L821 11.6 L836 6.6 L860 11.7 L872 11.0 L888 9.6 L903 11.4 L922 12.1 L938 6.3 L950 7.8 L969 14.6 L991 14.0 L1014 8.6 L1037 12.7 L1047 6.2 L1055 13.6 L1067 7.1 L1087 9.4 L1096 7.6 L1113 7.7 L1126 13.1 L1142 9.2 L1159 6.2 L1174 10.2 L1185 7.1 L1200 10.0 L1200 30Z"/></symbol>
+<symbol id="tear2" viewBox="0 0 1200 30" preserveAspectRatio="none"><path fill="#fff" fill-opacity=".6" d="M0 30 L0 12.5 L25 4.6 L35 10.0 L56 10.4 L69 8.7 L88 9.1 L99 8.8 L114 10.1 L140 13.6 L158 8.8 L171 4.8 L179 8.7 L193 8.0 L217 7.9 L235 5.3 L244 4.8 L254 6.8 L280 8.3 L291 12.7 L314 10.5 L338 11.4 L360 6.3 L386 12.2 L397 9.6 L418 7.0 L435 8.6 L460 8.2 L483 6.5 L507 13.5 L523 10.1 L548 10.5 L564 6.4 L578 9.3 L589 12.9 L602 13.3 L615 13.5 L636 8.8 L654 10.4 L672 6.1 L684 8.2 L709 9.8 L718 10.8 L739 12.9 L751 9.2 L760 8.1 L773 4.6 L796 4.3 L814 11.5 L826 4.9 L850 8.6 L871 3.6 L885 4.6 L905 4.8 L931 4.5 L952 2.3 L964 11.5 L975 4.8 L996 5.6 L1004 12.6 L1015 4.0 L1029 7.7 L1051 4.5 L1065 4.8 L1081 10.1 L1102 13.2 L1124 12.2 L1144 6.7 L1157 9.1 L1170 5.5 L1186 11.9 L1197 9.1 L1200 7.0 L1200 30Z"/><path fill="currentColor" d="M0 30 L0 15.6 L25 6.6 L35 14.4 L56 12.7 L69 12.1 L88 11.8 L99 10.3 L114 13.2 L140 15.5 L158 10.4 L171 6.4 L179 10.6 L193 9.8 L217 11.3 L235 8.4 L244 9.3 L254 11.1 L280 12.7 L291 14.9 L314 13.3 L338 13.6 L360 9.5 L386 15.6 L397 13.5 L418 10.6 L435 10.9 L460 11.0 L483 9.5 L507 15.0 L523 11.7 L548 13.2 L564 8.2 L578 13.0 L589 15.1 L602 15.1 L615 15.6 L636 11.0 L654 12.5 L672 9.1 L684 11.1 L709 12.2 L718 14.2 L739 15.1 L751 13.4 L760 12.5 L773 8.3 L796 7.1 L814 14.5 L826 8.1 L850 10.2 L871 6.3 L885 7.7 L905 6.8 L931 6.3 L952 6.2 L964 14.1 L975 7.8 L996 9.9 L1004 15.9 L1015 6.4 L1029 12.2 L1051 7.1 L1065 6.3 L1081 13.7 L1102 15.0 L1124 14.6 L1144 10.7 L1157 12.6 L1170 7.0 L1186 14.7 L1197 11.8 L1200 10.0 L1200 30Z"/></symbol>
+<symbol id="fl1" viewBox="-50 -50 100 100">
+  <g fill="#6E90D8" stroke="#3F5EA8" stroke-width="1"><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(0)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(45)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(90)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(135)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(180)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(225)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(270)"/><path d="M0 -6C-11 -17 -12 -38 -4 -46L0 -42 4 -46C12 -38 11 -17 0 -6Z" transform="rotate(315)"/></g>
+  <circle r="10" fill="#E8A13A"/><circle r="10" fill="url(#gK)"/>
+  <g fill="#8a4a12"><circle cx="-3" cy="-3" r="1.3"/><circle cx="3" cy="-1" r="1.3"/><circle cx="0" cy="4" r="1.3"/><circle cx="-4" cy="3" r="1"/></g>
+</symbol>
+<symbol id="fl2" viewBox="-50 -50 100 100">
+  <g fill="currentColor" stroke="#8f2a12" stroke-width=".9"><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(0)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(30)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(60)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(90)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(120)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(150)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(180)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(210)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(240)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(270)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(300)"/><ellipse cy="-27" rx="8.5" ry="19" transform="rotate(330)"/></g>
+  <circle r="12" fill="#F2B33D" stroke="#8f4a12" stroke-width="1"/><circle r="12" fill="url(#gK)"/>
+</symbol>
+<symbol id="arrow" viewBox="0 0 34 40"><path d="M7 2C1 13 23 15 18 27c-2 5-5 8-4 11M14 38l-6-7M14 38l7-6"/></symbol>
+<symbol id="i-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></symbol>
+<symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="i-pointer" viewBox="0 0 24 24"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+<symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+<symbol id="i-audio-lines" viewBox="0 0 24 24"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
+<symbol id="i-graduation-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+<symbol id="i-clapperboard" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/><path d="M19 12.859a10 10 0 0 0-2.007-1.523"/><path d="M2 8.82a15 15 0 0 1 4.177-2.643"/><path d="M22 8.82a15 15 0 0 0-11.288-3.764"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+<symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-triangle-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-lightbulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.972a4 4 0 0 1 3.6 2.2"/><path d="M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></symbol>
+<symbol id="i-ghost" viewBox="0 0 24 24"><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2.5 2.5L12 19l2.5 2.5L17 19l3 3V10a8 8 0 0 0-8-8z"/></symbol>
+<symbol id="i-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></symbol>
+<symbol id="i-hash" viewBox="0 0 24 24"><line x1="4" x2="20" y1="9" y2="9"/><line x1="4" x2="20" y1="15" y2="15"/><line x1="10" x2="8" y1="3" y2="21"/><line x1="16" x2="14" y1="3" y2="21"/></symbol>
+<symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-footprints" viewBox="0 0 24 24"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4"/><path d="M4 13h4"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-list-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+
+</svg>
+
+<header class="topbar">
+  <a class="logo brush" href="#top"><svg class="k" aria-hidden="true"><use href="#k4"/></svg>Plural</a>
+  <nav>
+    <a class="tag" href="#room"><svg class="ic"><use href="#i-pointer"/></svg> Комната</a>
+    <a class="tag f" href="#platform">Платформа · 30 €</a>
+    
+  </nav>
+  <i id="prog" aria-hidden="true"></i>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <svg class="legs dec" viewBox="0 0 120 250" aria-hidden="true">
+    <g class="lg"><rect x="26" y="16" width="24" height="158" rx="10" fill="url(#stripe)"/><rect x="26" y="16" width="24" height="158" rx="10" fill="none" stroke="#9b2d18" stroke-opacity=".25"/>
+      <path d="M20 168h34v22c0 4 4 6 12 8 13 3 14 19 0 19H22c-7 0-9-7-6-15z" fill="#1d1714"/><path d="M14 210h56" stroke="#3a302a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M28 176l18 4M28 184l18 4M37 172l-3 18" stroke="#F6EAD5" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="30" cy="198" rx="6" ry="3" fill="#fff" fill-opacity=".18"/></g>
+    <g class="lg lg2"><rect x="70" y="16" width="24" height="146" rx="10" fill="url(#stripe)"/>
+      <path d="M64 156h34v22c0 4 4 6 12 8 13 3 14 19 0 19H66c-7 0-9-7-6-15z" fill="#2a211c"/><path d="M58 198h56" stroke="#3a302a" stroke-width="5" stroke-linecap="round"/>
+      <path d="M72 164l18 4M72 172l18 4" stroke="#FFC96B" stroke-width="1.6" stroke-linecap="round"/></g>
+    <path d="M0 0h120v22c-6 9-14 9-20 0-6 9-14 9-20 0-6 9-14 9-20 0-6 9-14 9-20 0-6 9-14 9-20 0-6 9-14 9-20 0z" fill="#2F5E5A"/>
+    <path d="M0 18c6 9 14 9 20 0 6 9 14 9 20 0 6 9 14 9 20 0 6 9 14 9 20 0 6 9 14 9 20 0 6 9 14 9 20 0" fill="none" stroke="#F6EAD5" stroke-width="2" stroke-dasharray="3 4"/>
+  </svg>
+
+  <div class="bal b1 tap" data-pl="der Ballon|die Ballons|-s, как у иностранцев" role="button" tabindex="0" aria-label="Шарик: der Ballon, die Ballons"><div class="in"><div class="bob"><svg class="bl" style="--s:76px;--c:#7D9442"><use href="#bl"/></svg></div></div></div>
+  <div class="bal b2 tap" data-pl="der Ballon|die Ballons|-s, как у иностранцев" role="button" tabindex="0" aria-label="Шарик"><div class="in"><div class="bob d2"><svg class="bl" style="--s:64px;--c:#F2B33D"><use href="#bl"/></svg></div></div></div>
+  <div class="bal b3 tap" data-pl="der Ballon|die Ballons|-s, как у иностранцев" role="button" tabindex="0" aria-label="Шарик"><div class="in"><div class="bob d3"><svg class="bl" style="--s:70px;--c:#F29EA6"><use href="#bl"/></svg></div></div></div>
+  <div class="bal b4 tap" data-pl="der Ballon|die Ballons|-s, как у иностранцев" role="button" tabindex="0" aria-label="Шарик"><div class="in"><div class="bob"><svg class="bl" style="--s:66px;--c:#5A8ED2"><use href="#bl"/></svg></div></div></div>
+
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-sparkles"/></svg>Немецкий · A1–B1 · Plural</p>
+    <h1 class="brush h1"><span class="ln">Plural</span><span class="ln" style="font-size:.4em;margin-top:.1em">в немецком</span></h1>
+    <p class="brush sub">Комната, где всё размножается <span class="nw">по-своему</span></p>
+    <p class="lede">В английском добавил -s и свободен. В немецком так не прокатит. Пять окончаний, две точки сверху и пара хулиганов. Зато тут есть система. Покажу её на пуговицах.</p>
+    <div class="meta">
+      <span class="tag"><svg class="ic"><use href="#i-clock"/></svg>12 минут</span>
+      <span class="tag"><svg class="ic"><use href="#i-layers"/></svg>5 окончаний</span>
+      <span class="tag"><svg class="ic"><use href="#i-trophy"/></svg>тест</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn o big" href="#route">Погнали <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      <a class="btn ghost" href="#platform">310+ таких гайдов</a>
+      
+    </div>
+  </div>
+
+  <div class="hint dec" style="left:24%;right:auto;top:auto;bottom:84px;rotate:-6deg"><span>нажми на<br>пуговицу</span><svg><use href="#arrow"/></svg></div>
+  <svg class="flw fl1 dec spin" style="--s:118px;color:#E2531D" aria-hidden="true"><use href="#fl2"/></svg>
+  <svg class="flw fl2 dec" style="--s:96px" aria-hidden="true"><use href="#fl1"/></svg>
+  <div class="row">
+    <span class="tap" data-pl="der Knopf|die Knöpfe|-e и умлаут" role="button" tabindex="0" aria-label="Пуговица: der Knopf, die Knöpfe"><svg class="k" style="--s:74px;--c:#F29EA6"><use href="#k4"/></svg></span>
+    <span class="tap" data-pl="der Knopf|die Knöpfe|-e и умлаут" role="button" tabindex="0" aria-label="Пуговица"><svg class="k" style="--s:84px;--c:#F2B33D"><use href="#k4"/></svg></span>
+    <span class="tap" data-pl="der Knopf|die Knöpfe|-e и умлаут" role="button" tabindex="0" aria-label="Пуговица"><svg class="k" style="--s:78px;--c:#5A8ED2"><use href="#k2"/></svg></span>
+    <span class="tap" data-pl="der Knopf|die Knöpfe|-e и умлаут" role="button" tabindex="0" aria-label="Пуговица"><svg class="k" style="--s:70px;--c:#E2531D"><use href="#k4"/></svg></span>
+    <span class="tap" data-pl="der Knopf|die Knöpfe|-e и умлаут" role="button" tabindex="0" aria-label="Пуговица"><svg class="k" style="--s:80px;--c:#7D9442"><use href="#k2"/></svg></span>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="s-or" id="story">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="dec" style="right:-8px;top:-30px;z-index:4"><svg class="k bob" style="--s:64px;--c:#5A8ED2"><use href="#k4"/></svg></div>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-mail"/></svg>История · Австрия, первая неделя</p>
+    <h2 class="brush h2 c mega">Zwei Brötchens, bitte. <span class="ylc">И продавщица улыбнулась</span></h2>
+    <div class="story">
+      <div class="sitem rv">
+        <figure class="pol" style="--r:-4deg"><span class="pin"></span><span class="ph">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFC96B"/><circle cx="50" cy="58" r="40" fill="#F6EAD5"/><circle cx="50" cy="58" r="34" fill="none" stroke="#e7d2ad" stroke-width="2"/>
+            <ellipse cx="37" cy="56" rx="21" ry="15" fill="#B96A2B"/><ellipse cx="36" cy="51" rx="17" ry="10" fill="#E09A4E"/><path d="M24 52q12-8 26 0" stroke="#8a4e1c" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <ellipse cx="62" cy="68" rx="21" ry="15" fill="#B96A2B"/><ellipse cx="61" cy="63" rx="17" ry="10" fill="#E9A85A"/><path d="M49 64q12-8 26 0" stroke="#8a4e1c" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <g fill="#FFF3D6"><ellipse cx="32" cy="46" rx="1.6" ry=".9"/><ellipse cx="40" cy="47" rx="1.6" ry=".9"/><ellipse cx="58" cy="59" rx="1.6" ry=".9"/><ellipse cx="66" cy="58" rx="1.6" ry=".9"/></g>
+            <ellipse cx="30" cy="45" rx="6" ry="2.5" fill="#fff" fill-opacity=".35"/></svg></span>
+          <figcaption>Spar, 7:40</figcaption></figure>
+        <div class="note" style="--r:3deg"><div class="np">Первая неделя в Австрии. Иду в Spar за завтраком. Всю дорогу репетирую фразу. Захожу и уверенно говорю: <b>Zwei Brötchens, bitte.</b></div></div>
+      </div>
+      <div class="sitem rv">
+        <figure class="pol" style="--r:3deg"><span class="pin"></span><span class="ph">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#5A8ED2"/><path d="M24 10h52v76l-4 4-4-4-4 4-4-4-4 4-4-4-4 4-4-4-4 4-4-4-4 4-4-4z" fill="#FFFDF6"/>
+            <text x="50" y="24" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="9" fill="#2B211B">SPAR</text>
+            <path d="M30 30h40" stroke="#2B211B" stroke-dasharray="2 2" stroke-width=".8"/>
+            <text x="29" y="42" font-family="Inter,sans-serif" font-size="5.4" fill="#2B211B">2× Brötchen</text><text x="70" y="42" text-anchor="end" font-family="Inter,sans-serif" font-size="6.2" fill="#2B211B">0,90</text>
+            <text x="30" y="58" font-family="Marck Script,cursive" font-size="10" fill="#2B211B">Brötchen<tspan fill="#D8451B">s</tspan></text><path d="M64 51l6 7M70 51l-6 7" stroke="#D8451B" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M30 66h40" stroke="#2B211B" stroke-dasharray="2 2" stroke-width=".8"/>
+            <text x="30" y="76" font-family="Inter,sans-serif" font-weight="700" font-size="6.2" fill="#2B211B">SUMME</text><text x="70" y="76" text-anchor="end" font-family="Inter,sans-serif" font-weight="700" font-size="6.2" fill="#2B211B">0,90</text></svg></span>
+          <figcaption>Касса номер два</figcaption></figure>
+        <div class="note" style="--r:-3deg"><div class="np">Продавщица смотрит на меня, как на ребёнка в ботинках не на ту ногу. И мягко поправляет: <b>Brötchen. Einfach Brötchen.</b></div></div>
+      </div>
+      <div class="sitem rv">
+        <figure class="pol" style="--r:-2deg"><span class="pin"></span><span class="ph">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#7D9442"/><g transform="rotate(-4 50 50)"><rect x="14" y="10" width="72" height="82" rx="2" fill="#FFFDF6"/>
+            <path d="M14 26h72M14 35h72M14 44h72M14 53h72M14 62h72M14 71h72M14 80h72" stroke="#a9c0e0" stroke-width=".7"/><path d="M24 10v82" stroke="#e58a7a" stroke-width=".8"/>
+            <text x="28" y="33" font-family="Marck Script,cursive" font-size="9.5" fill="#2B211B">das Brötchen</text>
+            <text x="28" y="51" font-family="Marck Script,cursive" font-size="9.5" fill="#2B211B">die Brötchen</text><path d="M76 45l3 4 6-8" stroke="#3f8a2f" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <text x="28" y="69" font-family="Marck Script,cursive" font-size="9.5" fill="#D8451B">-chen → Ø</text></g></svg></span>
+          <figcaption>Дома, вечер</figcaption></figure>
+        <div class="note" style="--r:2deg"><div class="np">Я поставил -s, потому что в английском так работает. А в немецком -s носят в основном иностранцы. <b>Brötchen местный. Он вообще ничего не меняет.</b></div></div>
+      </div>
+    </div>
+    <div class="ps note y rv" style="--r:-2deg"><div class="np">P.S. В Австрии булочку вообще зовут Semmel. Во множественном Semmeln. Но это уже другая история.</div></div>
+    <p class="lede c" style="margin-top:28px">Сегодня разберём, кто в немецкой семье что получает. И почему Brötchen спокойно живёт без окончаний.</p>
+  </div>
+</section>
+
+<div class="band-wrap" aria-hidden="true"><div class="band"><div class="track">
+  <span class="brush">der Hund → die Hunde <svg class="k" style="--c:#5A8ED2"><use href="#k4"/></svg> die Frau → die Frauen <svg class="k" style="--c:#7D9442"><use href="#k2"/></svg> das Kind → die Kinder <svg class="k" style="--c:#E2531D"><use href="#k4"/></svg> das Auto → die Autos <svg class="k" style="--c:#F29EA6"><use href="#k2"/></svg> der Lehrer → die Lehrer <svg class="k" style="--c:#5A8ED2"><use href="#k4"/></svg></span>
+  <span class="brush">der Hund → die Hunde <svg class="k" style="--c:#5A8ED2"><use href="#k4"/></svg> die Frau → die Frauen <svg class="k" style="--c:#7D9442"><use href="#k2"/></svg> das Kind → die Kinder <svg class="k" style="--c:#E2531D"><use href="#k4"/></svg> das Auto → die Autos <svg class="k" style="--c:#F29EA6"><use href="#k2"/></svg> der Lehrer → die Lehrer <svg class="k" style="--c:#5A8ED2"><use href="#k4"/></svg></span>
+</div></div></div>
+
+<!-- ============ ROUTE ============ -->
+<section class="s-yl" id="route">
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-route"/></svg>Маршрут · 10 остановок</p>
+    <h2 class="brush h2 c red mega">Пришиваем по одной пуговице</h2>
+    <p class="lede c">Иди по порядку. Каждая остановка держится на предыдущей. Тапни, чтобы прыгнуть.</p>
+    <div class="rt-scroll"><div class="rt">
+      <div class="thread" aria-hidden="true"><i id="rtFill"></i></div>
+      <a class="stop" href="#core"><span class="dot"><svg class="k" style="--c:#E2531D"><use href="#k0"/></svg><b class="brush">1</b></span><span>Пять окончаний</span></a>
+      <a class="stop" href="#die"><span class="dot"><svg class="k" style="--c:#5A8ED2"><use href="#k0"/></svg><b class="brush">2</b></span><span>Артикль die</span></a>
+      <a class="stop" href="#kids"><span class="dot"><svg class="k" style="--c:#7D9442"><use href="#k0"/></svg><b class="brush">3</b></span><span>Характеры</span></a>
+      <a class="stop" href="#umlaut"><span class="dot"><svg class="k" style="--c:#EE8C95"><use href="#k0"/></svg><b class="brush">4</b></span><span>Умлаут</span></a>
+      <a class="stop" href="#flow"><span class="dot"><svg class="k" style="--c:#2B211B"><use href="#k0"/></svg><b class="brush">5</b></span><span>Четыре вопроса</span></a>
+      <a class="stop" href="#suffix"><span class="dot"><svg class="k" style="--c:#D8451B"><use href="#k0"/></svg><b class="brush">6</b></span><span>Суффиксы</span></a>
+      <a class="stop" href="#gender"><span class="dot"><svg class="k" style="--c:#5A8ED2"><use href="#k0"/></svg><b class="brush">7</b></span><span>От рода</span></a>
+      <a class="stop" href="#traps"><span class="dot"><svg class="k" style="--c:#7D9442"><use href="#k0"/></svg><b class="brush">8</b></span><span>Подвохи</span></a>
+      <a class="stop" href="#room"><span class="dot"><svg class="k" style="--c:#E2531D"><use href="#k0"/></svg><b class="brush">9</b></span><span>Комната</span></a>
+      <a class="stop" href="#quiz"><span class="dot"><svg class="k" style="--c:#2B211B"><use href="#k0"/></svg><b class="brush">10</b></span><span>Тест</span></a>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ CORE ============ -->
+<section class="s-cr" id="core">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-layers"/></svg>Остановка 1 · Главная идея</p>
+    <h2 class="brush h2 c red mega">Пять окончаний. Одна семья</h2>
+    <p class="lede c">В английском у множественного одно лицо: -s. В немецком их пять. Плюс две точки сверху. Смотри, как шарики разносят окончания по словам.</p>
+    <div class="deliv" id="deliv">
+      <div class="bals">
+        <button class="eb dk" data-i="0" type="button" aria-label="Окончание -e"><svg class="bl" style="--c:#F2B33D"><use href="#bl"/></svg><span class="lab brush">-e</span></button>
+        <button class="eb" data-i="1" type="button" aria-label="Окончание -en"><svg class="bl" style="--c:#EE8C95"><use href="#bl"/></svg><span class="lab brush">-en</span></button>
+        <button class="eb" data-i="2" type="button" aria-label="Окончание -er"><svg class="bl" style="--c:#7D9442"><use href="#bl"/></svg><span class="lab brush">-er</span></button>
+        <button class="eb" data-i="3" type="button" aria-label="Окончание -s"><svg class="bl" style="--c:#5A8ED2"><use href="#bl"/></svg><span class="lab brush">-s</span></button>
+        <button class="eb" data-i="4" type="button" aria-label="Без окончания"><svg class="bl" style="--c:#D8451B"><use href="#bl"/></svg><span class="lab brush">Ø</span></button>
+      </div>
+      <div class="wcard note" style="--r:-1deg"><div class="np">
+        <div class="word brush" id="dw"><span class="art flip" id="dArt" data-from="der" data-to="die"></span><span><span id="dStem">Hund</span><span class="end hide" id="dEnd">e</span></span></div>
+        <p class="wru" id="dRu">собака → собаки</p>
+      </div></div>
+      <p class="dcap" id="dCap"></p>
+      <div class="ctrl">
+        <button class="rbtn" id="dPrev" type="button" aria-label="Назад"><svg class="ic"><use href="#i-arrow-left"/></svg></button>
+        <div class="sdots" id="dDots"><i></i><i></i><i></i><i></i><i></i></div>
+        <button class="rbtn" id="dNext" type="button" aria-label="Дальше"><svg class="ic"><use href="#i-arrow-right"/></svg></button>
+        <button class="say" id="dSay" type="button" data-say="der Hund. die Hunde" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button>
+        <button class="rbtn" id="dReplay" type="button" aria-label="Сначала"><svg class="ic"><use href="#i-repeat"/></svg></button>
+      </div>
+    </div>
+
+    <div id="die" style="padding-top:70px">
+      <p class="eyebrow"><svg class="ic"><use href="#i-crown"/></svg>Остановка 2 · Хорошая новость</p>
+      <h3 class="brush h2 c red mega">Артикль один на всех: die</h3>
+      <p class="lede c">Мужчины, дети, женщины. Во множественном все становятся die. Демократия.</p>
+      <div class="arts" id="arts">
+        <div class="ab"><svg class="bl" style="--c:#5A8ED2"><use href="#bl"/></svg><span class="flip brush" data-from="der" data-to="die"></span></div>
+        <div class="ab"><svg class="bl" style="--c:#7D9442"><use href="#bl"/></svg><span class="flip brush" data-from="das" data-to="die"></span></div>
+        <div class="ab"><svg class="bl" style="--c:#EE8C95"><use href="#bl"/></svg><span class="flip brush" data-from="die" data-to="die"></span></div>
+      </div>
+      <div class="ex3">
+        <span class="chipw"><span>die Hund<em>e</em></span><button class="say" type="button" data-say="der Hund. die Hunde" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></span>
+        <span class="chipw"><span>die Kind<em>er</em></span><button class="say" type="button" data-say="das Kind. die Kinder" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></span>
+        <span class="chipw"><span>die Frau<em>en</em></span><button class="say" type="button" data-say="die Frau. die Frauen" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KIDS ============ -->
+<section class="s-nt" id="kids">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="dec bf1 bob"><svg class="bfly flap" viewBox="-52 -42 104 84" style="--s:70px" aria-hidden="true"><g style="color:#F2B33D"><g><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><g transform="scale(-1 1)"><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><ellipse rx="3" ry="17" fill="#2a1a12"/><path d="M-1 -15Q-6 -30 -12 -34M1 -15Q6 -30 12 -34" stroke="#2a1a12" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-34" r="2" fill="#2a1a12"/><circle cx="12" cy="-34" r="2" fill="#2a1a12"/></g></svg></div>
+  <div class="dec bf2 bob d2"><svg class="bfly flap" viewBox="-52 -42 104 84" style="--s:58px" aria-hidden="true"><g style="color:#F29EA6"><g><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><g transform="scale(-1 1)"><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><ellipse rx="3" ry="17" fill="#2a1a12"/><path d="M-1 -15Q-6 -30 -12 -34M1 -15Q6 -30 12 -34" stroke="#2a1a12" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-34" r="2" fill="#2a1a12"/><circle cx="12" cy="-34" r="2" fill="#2a1a12"/></g></svg></div>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-users"/></svg>Остановка 3 · Характеры</p>
+    <h2 class="brush h2 c mega">Если бы окончания были <span class="ylc">детьми</span></h2>
+    <p class="lede c">В семье пятеро. У каждого свой характер. Узнаешь характер, угадаешь plural.</p>
+    <div class="kids">
+      <article class="kid note" style="--r:-1.4deg"><div class="np">
+        <div class="top"><span class="end brush">-e</span><div class="nm"><b>Старший брат</b><small>самый популярный</small></div><span class="num brush">01</span></div>
+        <p>Его получают почти все мужчины и большая часть das. Надёжный. Скучный. Работает.</p>
+        <ul>
+          <li><span>der Tag → die Tag<em>e</em></span><button class="say" type="button" data-say="der Tag. die Tage" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>das Jahr → die Jahr<em>e</em></span><button class="say" type="button" data-say="das Jahr. die Jahre" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>der Stuhl → die St<em>ü</em>hl<em>e</em></span><button class="say" type="button" data-say="der Stuhl. die Stühle" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+        </ul>
+        <span class="uml"><svg class="k" style="--c:#5A8ED2"><use href="#k2"/></svg>Умлаут: иногда</span>
+      </div></article>
+      <article class="kid note" style="--r:1.2deg"><div class="np">
+        <div class="top"><span class="end brush">-(e)n</span><div class="nm"><b>Сестра-отличница</b><small>все женщины семьи</small></div><span class="num brush">02</span></div>
+        <p>Почти все слова женского рода. Плюс мужчины на -e, -ent, -ist. Умлаут не носит. Принципиально.</p>
+        <ul>
+          <li><span>die Frau → die Frau<em>en</em></span><button class="say" type="button" data-say="die Frau. die Frauen" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>die Lampe → die Lampe<em>n</em></span><button class="say" type="button" data-say="die Lampe. die Lampen" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>der Student → die Student<em>en</em></span><button class="say" type="button" data-say="der Student. die Studenten" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+        </ul>
+        <span class="uml"><svg class="ic"><use href="#i-x"/></svg>Умлаут: никогда</span>
+      </div></article>
+      <article class="kid note" style="--r:-.8deg"><div class="np">
+        <div class="top"><span class="end brush">-er</span><div class="nm"><b>Младший хулиган</b><small>мало, но громкий</small></div><span class="num brush">03</span></div>
+        <p>Таких слов несколько десятков. В основном das. Зато все очень частые. И пуговки сверху почти всегда.</p>
+        <ul>
+          <li><span>das Kind → die Kind<em>er</em></span><button class="say" type="button" data-say="das Kind. die Kinder" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>das Buch → die B<em>ü</em>ch<em>er</em></span><button class="say" type="button" data-say="das Buch. die Bücher" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>der Mann → die M<em>ä</em>nn<em>er</em></span><button class="say" type="button" data-say="der Mann. die Männer" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+        </ul>
+        <span class="uml"><svg class="k" style="--c:#EE8C95"><use href="#k2"/></svg>Умлаут: всегда, если есть a, o, u</span>
+      </div></article>
+      <article class="kid note" style="--r:1.6deg"><div class="np">
+        <div class="top"><span class="end brush">Ø</span><div class="nm"><b>Тихоня</b><small>ничего не меняет</small></div><span class="num brush">04</span></div>
+        <p>der и das на -el, -en, -er. Плюс малыши на -chen и -lein. Меняется только артикль. Иногда пуговки.</p>
+        <ul>
+          <li><span>der Lehrer → die Lehrer</span><button class="say" type="button" data-say="der Lehrer. die Lehrer" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>das Mädchen → die Mädchen</span><button class="say" type="button" data-say="das Mädchen. die Mädchen" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>der Vater → die V<em>ä</em>ter</span><button class="say" type="button" data-say="der Vater. die Väter" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+        </ul>
+        <span class="uml"><svg class="k" style="--c:#7D9442"><use href="#k2"/></svg>Умлаут: иногда</span>
+      </div></article>
+      <article class="kid note" style="--r:-1.2deg"><div class="np">
+        <div class="top"><span class="end brush">-s</span><div class="nm"><b>Иностранец</b><small>приехал последним</small></div><span class="num brush">05</span></div>
+        <p>Слова из английского и французского. Слова на гласную, кроме -e. Имена и сокращения. Он тут в гостях.</p>
+        <ul>
+          <li><span>das Auto → die Auto<em>s</em></span><button class="say" type="button" data-say="das Auto. die Autos" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>das Handy → die Handy<em>s</em></span><button class="say" type="button" data-say="das Handy. die Handys" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+          <li><span>die Oma → die Oma<em>s</em></span><button class="say" type="button" data-say="die Oma. die Omas" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></li>
+        </ul>
+        <span class="uml"><svg class="ic"><use href="#i-x"/></svg>Умлаут: никогда</span>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UMLAUT ============ -->
+<section class="s-dots" id="umlaut">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" style="background:#FFFBF2;width:max-content;margin:0 auto 16px;padding:6px 12px;border-radius:99px;opacity:1"><svg class="ic"><use href="#i-sparkles"/></svg>Остановка 4 · Умлаут</p>
+    <h2 class="brush h2 c red mega">Умлаут это <span class="ink">две пуговки</span></h2>
+    <div class="note w" style="--r:-1deg;max-width:420px;margin:18px auto 0"><div class="np c">Иногда одного окончания мало. Немцы пришивают сверху две точки: a → ä, o → ö, u → ü, au → äu. <b>Нажми на слово, и пуговки упадут.</b></div></div>
+    <div class="ulab" id="ulab"></div>
+    <div class="urules">
+      <div class="note rv" style="--r:-1.5deg"><div class="np"><svg class="k" style="--c:#5A8ED2"><use href="#k2"/></svg><span><b>-(e)n и -s пуговки не носят.</b> Никогда. Frau → Frauen, Auto → Autos.</span></div></div>
+      <div class="note rv" style="--r:1.2deg"><div class="np"><svg class="k" style="--c:#EE8C95"><use href="#k2"/></svg><span><b>-er носит всегда</b>, если есть куда пришить. Buch → Bücher, Haus → Häuser.</span></div></div>
+      <div class="note rv" style="--r:-.8deg"><div class="np"><svg class="k" style="--c:#7D9442"><use href="#k2"/></svg><span><b>-e и ноль решают сами.</b> Stuhl → Stühle, но Hund → Hunde. Тут просто учи слово парой.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOW ============ -->
+<section class="s-or" id="flow">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-search"/></svg>Остановка 5 · Алгоритм</p>
+    <h2 class="brush h2 c mega">Четыре вопроса <span class="ylc">к любому слову</span></h2>
+    <p class="lede c">Задаю их по порядку. Как на таможне. Первое «да» и есть ответ.</p>
+    <div class="flow" id="flowA" data-flow='[{"t":"das Auto","hit":0,"a":"die Autos"},{"t":"das Mädchen","hit":1,"a":"die Mädchen"},{"t":"die Zeitung","hit":2,"a":"die Zeitungen"},{"t":"der Hund","hit":3,"a":"die Hunde"},{"t":"die Oma","hit":0,"a":"die Omas"},{"t":"der Kuchen","hit":1,"a":"die Kuchen"},{"t":"der Student","hit":2,"a":"die Studenten"},{"t":"das Spiel","hit":3,"a":"die Spiele"}]'>
+      <span class="fq brush">das Auto</span>
+      <div class="fn"><span class="n brush">1</span><span class="q">Гость? Кончается на гласную, но не на -e? Имя или сокращение?<small>Auto, Kino, Oma, Handy, CD</small></span><span class="res brush">-s</span></div>
+      <div class="fno"><svg class="ic"><use href="#i-arrow-right"/></svg>нет</div>
+      <div class="fn"><span class="n brush">2</span><span class="q">der или das на -el, -en, -er, -chen, -lein?<small>Lehrer, Kuchen, Mädchen</small></span><span class="res brush">Ø</span></div>
+      <div class="fno"><svg class="ic"><use href="#i-arrow-right"/></svg>нет</div>
+      <div class="fn"><span class="n brush">3</span><span class="q">Женский род? Или мужчина на -e, -ent, -ist?<small>Frau, Zeitung, Junge, Student</small></span><span class="res brush">-(e)n</span></div>
+      <div class="fno"><svg class="ic"><use href="#i-arrow-right"/></svg>нет</div>
+      <div class="fn"><span class="n brush">4</span><span class="q">Все остальные der и das<small>Hund, Tag, Spiel, Jahr</small></span><span class="res brush">-e</span></div>
+      <p class="fa brush" aria-live="polite"></p>
+    </div>
+    <div class="note y" style="--r:-1.5deg;max-width:520px;margin:30px auto 0"><div class="np"><b>Клуб -er проходит без очереди.</b> Kind, Buch, Haus, Bild, Mann, Wald. Их немного, но они везде. Просто знай их в лицо: Kinder, Bücher, Häuser.</div></div>
+  </div>
+</section>
+
+<!-- ============ SUFFIX FACTORY ============ -->
+<section class="s-wall" id="suffix">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-zap"/></svg>Остановка 6 · Суффиксы</p>
+    <h2 class="brush h2 c red mega">Хвост слова решает за тебя</h2>
+    <p class="lede c">Видишь знакомый суффикс и уже знаешь plural. Без словаря. Закидываем слова в машинку.</p>
+    <div class="fab" id="fab">
+      <div class="slot"><span class="wchip" id="fIn">die Zeit<em>ung</em></span></div>
+      <div class="mach" id="mach">
+        <svg viewBox="0 0 230 180" aria-hidden="true">
+          <rect x="150" y="0" width="18" height="34" fill="#7D5A44" stroke="#2B211B" stroke-width="2"/>
+          <g class="puff"><circle cx="160" cy="-8" r="9" fill="#fff"/><circle cx="170" cy="-18" r="6" fill="#fff"/></g>
+          <circle class="gear" cx="40" cy="78" r="16" fill="#F2B33D" stroke="#2B211B" stroke-width="7" stroke-dasharray="5 4"/>
+          <circle cx="40" cy="78" r="5" fill="#2B211B"/>
+          <g class="mbody">
+            <path d="M80 4h70l-16 30H96z" fill="#F2B33D" stroke="#2B211B" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="46" y="32" width="146" height="112" rx="18" fill="#E2531D" stroke="#2B211B" stroke-width="2.5"/>
+            <rect x="60" y="46" width="118" height="42" rx="10" fill="#F6EAD5" stroke="#2B211B" stroke-width="2"/>
+            <text x="119" y="74" text-anchor="middle" font-family="Amatic SC,cursive" font-weight="700" font-size="22" fill="#D8451B">PLURAL-O-MAT</text>
+            <use href="#k4" x="64" y="98" width="30" height="30" style="color:#5A8ED2"/>
+            <use href="#k4" x="104" y="98" width="30" height="30" style="color:#F29EA6"/>
+            <use href="#k2" x="144" y="98" width="30" height="30" style="color:#7D9442"/>
+            <rect x="98" y="144" width="42" height="18" fill="#C8431A" stroke="#2B211B" stroke-width="2.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="slot"><span class="wchip out" id="fOut">die Zeitung<em>en</em></span></div>
+      <div class="mlog" id="mlog" aria-live="polite"></div>
+    </div>
+    <div class="sufg">
+      <div class="suf rv" style="--r:-1.5deg"><div class="sx brush">-ung · -heit · -keit</div><div class="to">→ -en</div><div class="eg">Zeitungen, Freiheiten, Möglichkeiten</div></div>
+      <div class="suf rv" style="--r:1deg"><div class="sx brush">-schaft · -tät · -ion</div><div class="to">→ -en</div><div class="eg">Freundschaften, Universitäten, Nationen</div></div>
+      <div class="suf rv" style="--r:1.5deg"><div class="sx brush">-in</div><div class="to">→ -innen</div><div class="eg">Lehrerinnen. Да, две n</div></div>
+      <div class="suf rv" style="--r:-1deg"><div class="sx brush">-nis</div><div class="to">→ -nisse</div><div class="eg">Ergebnisse. Две s</div></div>
+      <div class="suf rv" style="--r:-1.2deg"><div class="sx brush">-ling</div><div class="to">→ -e</div><div class="eg">Schmetterlinge, Lieblinge</div></div>
+      <div class="suf rv" style="--r:1.3deg"><div class="sx brush">-tum</div><div class="to">→ -tümer</div><div class="eg">Irrtümer, Reichtümer</div></div>
+      <div class="suf rv" style="--r:1deg"><div class="sx brush">-chen · -lein</div><div class="to">→ ничего</div><div class="eg">Mädchen, Brötchen, Büchlein</div></div>
+      <div class="suf rv" style="--r:-1.4deg"><div class="sx brush">-a · -i · -o · -u · -y</div><div class="to">→ -s</div><div class="eg">Omas, Kiwis, Kinos, Uhus, Babys</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GENDER ============ -->
+<section class="s-cr" id="gender">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-shuffle"/></svg>Остановка 7 · Второй путь</p>
+    <h2 class="brush h2 c red mega">Или иди от рода</h2>
+    <p class="lede c">Есть два пути. От окончания и от рода. Сестре удобнее первый, мне второй. Выбирай свой.</p>
+    <div class="gps">
+      <article class="gp n rv" data-set='[["der","Hund","Hunde"],["der","Tag","Tage"],["der","Stuhl","Stühle"],["der","Lehrer","Lehrer"],["der","Student","Studenten"]]'>
+        <span class="ghost brush" aria-hidden="true">der</span>
+        <div class="gh"><span class="tag">der · мужской</span><button class="say" type="button" data-say="der Hund. die Hunde" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <div class="morph brush" aria-hidden="true"></div>
+        <dl class="spec">
+          <div><dt>Обычно</dt><dd>-e: Tag → Tage, Hund → Hunde</dd></div>
+          <div><dt>-el, -en, -er</dt><dd>ничего: Lehrer, Kuchen, Löffel</dd></div>
+          <div><dt>-e, -ent, -ist</dt><dd>-(e)n: Junge → Jungen, Student → Studenten</dd></div>
+          <div><dt>Клуб -er</dt><dd>Mann → Männer, Wald → Wälder</dd></div>
+        </dl>
+      </article>
+      <article class="gp y rv" data-set='[["das","Jahr","Jahre"],["das","Kind","Kinder"],["das","Haus","Häuser"],["das","Mädchen","Mädchen"],["das","Auto","Autos"]]'>
+        <span class="ghost brush" aria-hidden="true">das</span>
+        <div class="gh"><span class="tag">das · средний</span><button class="say" type="button" data-say="das Jahr. die Jahre" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <div class="morph brush" aria-hidden="true"></div>
+        <dl class="spec">
+          <div><dt>Обычно</dt><dd>-e: Jahr → Jahre, Spiel → Spiele</dd></div>
+          <div><dt>Клуб -er</dt><dd>Kind → Kinder, Buch → Bücher, Haus → Häuser</dd></div>
+          <div><dt>-chen, -lein, -el, -er</dt><dd>ничего: Mädchen, Fenster</dd></div>
+          <div><dt>Странные</dt><dd>-en: Bett → Betten, Auge → Augen, Ohr → Ohren</dd></div>
+        </dl>
+      </article>
+      <article class="gp o rv" data-set='[["die","Frau","Frauen"],["die","Blume","Blumen"],["die","Lehrerin","Lehrerinnen"],["die","Hand","Hände"],["die","Mutter","Mütter"]]'>
+        <span class="ghost brush" aria-hidden="true">die</span>
+        <div class="gh"><span class="tag">die · женский</span><button class="say" type="button" data-say="die Frau. die Frauen" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <div class="morph brush" aria-hidden="true"></div>
+        <dl class="spec">
+          <div><dt>Почти всегда</dt><dd>-(e)n: Frau → Frauen, Blume → Blumen</dd></div>
+          <div><dt>-in</dt><dd>-innen: Lehrerin → Lehrerinnen</dd></div>
+          <div><dt>Банда коротких</dt><dd>-e и умлаут: Hand → Hände, Nacht → Nächte, Stadt → Städte</dd></div>
+          <div><dt>Мама и дочка</dt><dd>только умлаут: Mutter → Mütter, Tochter → Töchter</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRAPS ============ -->
+<section class="s-nt" id="traps">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="dec bob d3" style="right:4px;top:26px;z-index:3"><svg class="bfly flap" viewBox="-52 -42 104 84" style="--s:54px" aria-hidden="true"><g style="color:#E2531D"><g><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><g transform="scale(-1 1)"><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><ellipse rx="3" ry="17" fill="#2a1a12"/><path d="M-1 -15Q-6 -30 -12 -34M1 -15Q6 -30 12 -34" stroke="#2a1a12" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-34" r="2" fill="#2a1a12"/><circle cx="12" cy="-34" r="2" fill="#2a1a12"/></g></svg></div>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-triangle-alert"/></svg>Остановка 8 · Подвохи</p>
+    <h2 class="brush h2 c mega">Письма, которые я храню <span class="ylc">под матрасом</span></h2>
+    <p class="lede c">Шесть подвохов. На каждом я хоть раз спотыкался. Открывай конверты.</p>
+    <div class="envs" id="envs">
+      <button class="env" type="button" data-i="0"><span class="eb2"></span><span class="flp"></span><span class="seal">1</span><span class="lt">Bank</span></button>
+      <button class="env" type="button" data-i="1"><span class="eb2"></span><span class="flp"></span><span class="seal">2</span><span class="lt">Mutter</span></button>
+      <button class="env" type="button" data-i="2"><span class="eb2"></span><span class="flp"></span><span class="seal">3</span><span class="lt">Wort</span></button>
+      <button class="env" type="button" data-i="3"><span class="eb2"></span><span class="flp"></span><span class="seal">4</span><span class="lt">Только много</span></button>
+      <button class="env" type="button" data-i="4"><span class="eb2"></span><span class="flp"></span><span class="seal">5</span><span class="lt">Только одно</span></button>
+      <button class="env" type="button" data-i="5"><span class="eb2"></span><span class="flp"></span><span class="seal">6</span><span class="lt">Гости</span></button>
+    </div>
+    <div class="letter note" style="--r:-1deg"><div class="np" id="letter" aria-live="polite"></div></div>
+  </div>
+</section>
+
+<!-- ============ ROOM ============ -->
+<section class="s-cr" id="room">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-pointer"/></svg>Остановка 9 · Найди всё</p>
+    <h2 class="brush h2 c red mega">Детская комната. 12 предметов</h2>
+    <p class="lede c">Тут всё во множественном. Нажимай на предметы. Каждый расскажет, как он размножается.</p>
+    <div class="roomw">
+      <svg class="room" id="roomSvg" viewBox="0 0 360 470" role="group" aria-label="Детская комната. Нажимай на предметы">
+        <defs>
+          <pattern id="wp" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F8EEDC"/><rect x="13" width="1" height="14" fill="#EBD9B9"/></pattern>
+          <pattern id="wd" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#F4BC52"/><circle cx="4" cy="4" r="1.2" fill="#8A3A1C"/><circle cx="12" cy="12" r="1" fill="#fff" fill-opacity=".6"/></pattern>
+          <pattern id="pd" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#FFFBF2"/><circle cx="3" cy="3" r="1.3" fill="#C8432A"/><circle cx="9" cy="9" r="1" fill="#C8432A"/></pattern>
+          <pattern id="flr" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#C9573A"/><path d="M0 19.5h40M20 0v20" stroke="#B44A30"/></pattern>
+          <radialGradient id="glow" cx="50%" cy="0%" r="80%"><stop offset="0" stop-color="#FFE3A0" stop-opacity=".75"/><stop offset="1" stop-color="#FFE3A0" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="360" height="230" fill="url(#wp)"/>
+        <rect y="215" width="360" height="125" fill="url(#wd)"/>
+        <rect y="211" width="360" height="6" fill="#E9A740"/>
+        <rect y="336" width="360" height="8" fill="#E5953A"/>
+        <rect y="342" width="360" height="128" fill="url(#flr)"/>
+        <!-- lamp (decor) -->
+        <path d="M352 64h-22v14" stroke="#7a2a17" stroke-width="3" fill="none"/>
+        <path d="M300 116l58 0-30-100z" fill="url(#glow)" opacity=".0"/>
+        <path d="M312 78h36l10 28h-56z" fill="#D8451B"/><path d="M318 80h10l-6 24h-12z" fill="#fff" fill-opacity=".25"/>
+        <ellipse cx="330" cy="140" rx="34" ry="34" fill="url(#glow)"/>
+
+        <!-- 1 socks on clothesline -->
+        <g class="obj" data-o="socke" tabindex="0" role="button" aria-label="Носки">
+          <path d="M8 40q172 26 344 0" stroke="#6b3a26" stroke-width="1.6" fill="none"/>
+          <g transform="translate(212 54) rotate(4)"><path d="M0 0h16v30c0 5 3 7 10 9 8 2 8 15-2 15H4c-6 0-8-5-8-10L0 0z" fill="url(#stripe)" stroke="#9b2d18" stroke-width=".8"/><rect x="5" y="-6" width="5" height="10" rx="1" fill="#C69A63"/></g>
+          <g transform="translate(246 56) rotate(-3)"><path d="M0 0h16v30c0 5 3 7 10 9 8 2 8 15-2 15H4c-6 0-8-5-8-10L0 0z" fill="url(#stripe)" stroke="#9b2d18" stroke-width=".8"/><rect x="5" y="-6" width="5" height="10" rx="1" fill="#C69A63"/></g>
+          <rect class="hl" x="200" y="44" width="80" height="70" rx="10"/>
+          <circle class="pulse" cx="270" cy="54" r="10" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="276" cy="52" r="8" fill="#5c9a3a"/><path d="M272 52l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 2 butterfly -->
+        <g class="obj" data-o="schmetterling" tabindex="0" role="button" aria-label="Бабочка">
+          <g transform="translate(66 124) scale(.62)" class="flap"><g style="color:#E2531D"><g><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><g transform="scale(-1 1)"><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><ellipse rx="3" ry="17" fill="#2a1a12"/><path d="M-1 -15Q-6 -30 -12 -34M1 -15Q6 -30 12 -34" stroke="#2a1a12" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-34" r="2" fill="#2a1a12"/><circle cx="12" cy="-34" r="2" fill="#2a1a12"/></g></g>
+          <rect class="hl" x="30" y="96" width="72" height="58" rx="10"/>
+          <circle class="pulse" cx="66" cy="124" r="12" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="96" cy="102" r="8" fill="#5c9a3a"/><path d="M92 102l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 3 balloons -->
+        <g class="obj" data-o="ballon" tabindex="0" role="button" aria-label="Шарики">
+          <path d="M138 150q10 40 18 74M174 150q-6 40-12 74" stroke="#9b2d18" stroke-width="1.6" fill="none"/>
+          <use href="#bl" x="112" y="54" width="52" height="104" style="color:#7D9442"/>
+          <use href="#bl" x="150" y="70" width="46" height="92" style="color:#F2B33D"/>
+          <rect class="hl" x="108" y="52" width="92" height="104" rx="12"/>
+          <circle class="pulse" cx="150" cy="90" r="12" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="196" cy="62" r="8" fill="#5c9a3a"/><path d="M192 62l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- nightstand (decor) -->
+        <rect x="24" y="274" width="86" height="62" fill="#E59B3A"/>
+        <rect x="18" y="266" width="98" height="9" rx="3" fill="#C9762A"/>
+        <path d="M28 304h78" stroke="#B9692A" stroke-width="2"/>
+        <circle cx="67" cy="290" r="3.5" fill="#5A8ED2"/><circle cx="67" cy="320" r="3.5" fill="#F29EA6"/>
+        <rect x="26" y="334" width="6" height="8" fill="#9b5a22"/><rect x="102" y="334" width="6" height="8" fill="#9b5a22"/>
+
+        <!-- 4 books -->
+        <g class="obj" data-o="buch" tabindex="0" role="button" aria-label="Книги">
+          <rect x="28" y="257" width="50" height="9" rx="1.5" fill="#5A8ED2"/><path d="M74 258.5v6" stroke="#FFF6E6" stroke-width="2"/>
+          <rect x="32" y="248" width="44" height="9" rx="1.5" fill="#7D9442"/><path d="M72 249.5v6" stroke="#FFF6E6" stroke-width="2"/>
+          <rect x="26" y="239" width="48" height="9" rx="1.5" fill="#D8451B"/><path d="M70 240.5v6" stroke="#FFF6E6" stroke-width="2"/>
+          <rect class="hl" x="22" y="234" width="60" height="36" rx="8"/>
+          <circle class="pulse" cx="50" cy="252" r="11" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="30" cy="236" r="8" fill="#5c9a3a"/><path d="M26 236l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 5 flowers -->
+        <g class="obj" data-o="blume" tabindex="0" role="button" aria-label="Цветы">
+          <path d="M94 240q-6-20-14-34M95 240q2-24 6-40M96 240q8-18 18-26" stroke="#4E7A3A" stroke-width="2" fill="none"/>
+          <use href="#fl2" x="68" y="194" width="24" height="24" style="color:#E2531D"/>
+          <use href="#fl1" x="90" y="186" width="24" height="24"/>
+          <use href="#fl2" x="106" y="204" width="20" height="20" style="color:#F2B33D"/>
+          <path d="M86 236h18l-2 30H88z" fill="#F29EA6"/><path d="M89 238h4l-1 26h-2z" fill="#fff" fill-opacity=".35"/>
+          <rect class="hl" x="64" y="182" width="64" height="88" rx="10"/>
+          <circle class="pulse" cx="102" cy="198" r="11" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="124" cy="190" r="8" fill="#5c9a3a"/><path d="M120 190l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 6 bed -->
+        <g class="obj" data-o="bett" tabindex="0" role="button" aria-label="Кровать">
+          <path d="M134 336V238q0-24 25-24t25 24v98z" fill="#D9542B"/><path d="M144 330V242q0-16 15-16t15 16v88z" fill="#E77A45"/>
+          <rect x="140" y="306" width="210" height="24" rx="4" fill="#E0662E"/>
+          <rect x="150" y="282" width="198" height="28" rx="8" fill="url(#pd)"/>
+          <rect x="338" y="268" width="14" height="66" rx="6" fill="#D9542B"/>
+          <rect x="146" y="330" width="7" height="10" fill="#8a3a1c"/><rect x="338" y="330" width="7" height="10" fill="#8a3a1c"/>
+          <rect class="hl" x="130" y="210" width="226" height="134" rx="12"/>
+          <circle class="pulse" cx="160" cy="300" r="11" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="142" cy="222" r="8" fill="#5c9a3a"/><path d="M138 222l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+        <!-- blanket (decor) -->
+        <path d="M232 280h108v28H226q-8-14 6-28z" fill="#2F4B3B"/><path d="M232 280h108v6H230z" fill="#3E604C"/>
+
+        <!-- 7 pillows -->
+        <g class="obj" data-o="kissen" tabindex="0" role="button" aria-label="Подушки">
+          <path d="M186 270q22-12 42 0 6 12 0 18-21 8-42 0-6-8 0-18z" fill="#FFFDF6" stroke="#e5d6bd"/>
+          <path d="M206 276q20-10 36 0 5 10 0 15-18 7-36 0-5-7 0-15z" fill="#FFF6E8" stroke="#e5d6bd"/>
+          <rect class="hl" x="180" y="260" width="68" height="36" rx="10"/>
+          <circle class="pulse" cx="214" cy="279" r="10" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="186" cy="262" r="8" fill="#5c9a3a"/><path d="M182 262l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 8 teddy -->
+        <g class="obj" data-o="teddy" tabindex="0" role="button" aria-label="Плюшевый мишка">
+          <circle cx="282" cy="244" r="6" fill="#A86A3A"/><circle cx="302" cy="244" r="6" fill="#A86A3A"/>
+          <ellipse cx="292" cy="272" rx="16" ry="15" fill="#B97A45"/>
+          <circle cx="292" cy="252" r="12" fill="#B97A45"/>
+          <ellipse cx="292" cy="257" rx="5" ry="4" fill="#E8C08F"/><circle cx="292" cy="255.5" r="1.6" fill="#2B211B"/>
+          <circle cx="287" cy="249" r="1.5" fill="#2B211B"/><circle cx="297" cy="249" r="1.5" fill="#2B211B"/>
+          <path d="M285 262q7 4 14 0" stroke="#D8451B" stroke-width="3" fill="none"/>
+          <rect class="hl" x="272" y="234" width="40" height="56" rx="10"/>
+          <circle class="pulse" cx="292" cy="272" r="10" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="312" cy="238" r="8" fill="#5c9a3a"/><path d="M308 238l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 9 letters -->
+        <g class="obj" data-o="brief" tabindex="0" role="button" aria-label="Письма">
+          <g transform="translate(228 344) rotate(-6)"><rect width="42" height="26" fill="#FFFBF2" stroke="#d8c29d"/><path d="M0 0l21 14L42 0" stroke="#d8c29d" fill="none"/><circle cx="21" cy="14" r="4" fill="#B5281D"/></g>
+          <g transform="translate(262 348) rotate(5)"><rect width="42" height="26" fill="#F3E3C6" stroke="#d8c29d"/><path d="M0 0l21 14L42 0" stroke="#d8c29d" fill="none"/><circle cx="21" cy="14" r="4" fill="#B5281D"/></g>
+          <rect class="hl" x="222" y="336" width="90" height="44" rx="8"/>
+          <circle class="pulse" cx="266" cy="360" r="10" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="306" cy="342" r="8" fill="#5c9a3a"/><path d="M302 342l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 10 cake -->
+        <g class="obj" data-o="kuchen" tabindex="0" role="button" aria-label="Торт">
+          <ellipse cx="76" cy="446" rx="62" ry="13" fill="#2B211B"/>
+          <path d="M30 398v40q46 14 92 0v-40z" fill="#F0A98E"/>
+          <ellipse cx="76" cy="398" rx="46" ry="11" fill="#FBE3CF"/>
+          <path d="M30 398q0 10 6 12 4-2 6 6 4-8 10-2 5 6 9-2 6 8 11 0 6 8 10-2 6 6 10 0 6 6 10-4 6 4 10-6v-12z" fill="#FBE3CF"/>
+          <g fill="#D8451B"><circle cx="40" cy="426" r="1.4"/><circle cx="58" cy="432" r="1.4"/><circle cx="84" cy="428" r="1.4"/><circle cx="104" cy="434" r="1.4"/><circle cx="114" cy="424" r="1.4"/></g>
+          <g fill="#5A8ED2"><circle cx="50" cy="436" r="1.2"/><circle cx="72" cy="438" r="1.2"/><circle cx="96" cy="424" r="1.2"/></g>
+          <circle cx="52" cy="398" r="5" fill="#C81E1E"/><circle cx="76" cy="404" r="5" fill="#C81E1E"/><circle cx="100" cy="398" r="5" fill="#C81E1E"/>
+          <circle cx="50.5" cy="396.5" r="1.4" fill="#fff" fill-opacity=".6"/><circle cx="74.5" cy="402.5" r="1.4" fill="#fff" fill-opacity=".6"/><circle cx="98.5" cy="396.5" r="1.4" fill="#fff" fill-opacity=".6"/>
+          <rect class="hl" x="22" y="384" width="108" height="76" rx="10"/>
+          <circle class="pulse" cx="76" cy="424" r="11" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="126" cy="392" r="8" fill="#5c9a3a"/><path d="M122 392l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 11 candles -->
+        <g class="obj" data-o="kerze" tabindex="0" role="button" aria-label="Свечи">
+          <rect x="44" y="364" width="5" height="32" fill="url(#cstripe)"/><rect x="64" y="358" width="5" height="40" fill="url(#cstripe)"/><rect x="86" y="360" width="5" height="38" fill="url(#cstripe)"/><rect x="106" y="366" width="5" height="30" fill="url(#cstripe)"/>
+          <g class="flame"><path d="M46.5 352q-5 6 0 11 5-5 0-11z" fill="#F7B733"/><path d="M66.5 346q-5 6 0 11 5-5 0-11z" fill="#F7B733"/><path d="M88.5 348q-5 6 0 11 5-5 0-11z" fill="#F7B733"/><path d="M108.5 354q-5 6 0 11 5-5 0-11z" fill="#F7B733"/></g>
+          <rect class="hl" x="38" y="340" width="80" height="58" rx="8"/>
+          <circle class="pulse" cx="77" cy="368" r="10" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="118" cy="346" r="8" fill="#5c9a3a"/><path d="M114 346l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+
+        <!-- 12 buttons -->
+        <g class="obj" data-o="knopf" tabindex="0" role="button" aria-label="Пуговицы">
+          <use href="#k4" x="190" y="398" width="58" height="58" style="color:#F29EA6"/>
+          <use href="#k2" x="240" y="414" width="50" height="50" style="color:#5A8ED2"/>
+          <use href="#k4" x="284" y="392" width="62" height="62" style="color:#F2B33D"/>
+          <rect class="hl" x="186" y="388" width="164" height="78" rx="12"/>
+          <circle class="pulse" cx="266" cy="430" r="12" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <g class="chk"><circle cx="196" cy="398" r="8" fill="#5c9a3a"/><path d="M192 398l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/></g>
+        </g>
+      </svg>
+      <div class="rcard note" style="--r:-1deg"><div class="np" id="rcard">
+        <div class="rw"><span class="pair brush" id="rPair">Нажми на предмет</span><button class="say" id="rSay" type="button" data-say="" aria-label="Послушать" hidden><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <p class="rule" id="rRule">Шарики, пуговицы, торт, носки. Найди все двенадцать.</p>
+        <div class="found"><span id="rCount">Найдено 0 из 12</span><span class="fd" id="rDots"></span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLASH BUTTONS ============ -->
+<section class="s-yl" id="cards">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-brain"/></svg>Тренировка · 10 слов</p>
+    <h2 class="brush h2 c red mega">Пуговицы-карточки</h2>
+    <p class="lede c">Скажи plural вслух. Потом переверни пуговицу и проверь себя. Не подглядывай в шпаргалку.</p>
+    <div class="fcs" id="fcs"></div>
+    <p class="fcount" id="fcount">Открыто 0 из 10</p>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="s-or" id="quiz">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="dec bob" style="left:-14px;top:40px;z-index:3"><svg class="bl" style="--s:58px;--c:#F2B33D"><use href="#bl"/></svg></div>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-trophy"/></svg>Остановка 10 · Тест</p>
+    <h2 class="brush h2 c mega">Шесть вопросов. <span class="ylc">Без шпаргалки</span></h2>
+    <div class="qz note" id="qzw" style="--r:-.6deg"><div class="np" id="qz"></div></div>
+  </div>
+</section>
+
+<!-- ============ CHEAT ============ -->
+<section class="s-cr" id="cheat">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <svg class="flw dec spin" style="--s:120px;right:-34px;top:30px;color:#F2B33D" aria-hidden="true"><use href="#fl2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-list-checks"/></svg>Шпаргалка · Сохрани скрин</p>
+    <h2 class="brush h2 c red mega">Весь Plural на одном экране</h2>
+    <div class="cheat stg">
+      <div class="cr" style="--r:-1deg"><span class="ci"><svg class="k" style="--c:#5A8ED2"><use href="#k0"/></svg><b class="brush">1</b></span><span class="ct">der → обычно -e<small>Hund → Hunde, Tag → Tage</small></span><span class="cend brush">-e</span></div>
+      <div class="cr" style="--r:1deg"><span class="ci"><svg class="k" style="--c:#EE8C95"><use href="#k0"/></svg><b class="brush">2</b></span><span class="ct">die → почти всегда -(e)n<small>Frau → Frauen, Lampe → Lampen</small></span><span class="cend brush">-(e)n</span></div>
+      <div class="cr" style="--r:.6deg"><span class="ci"><svg class="k" style="--c:#7D9442"><use href="#k0"/></svg><b class="brush">3</b></span><span class="ct">Клуб -er, с умлаутом<small>Kind → Kinder, Buch → Bücher</small></span><span class="cend brush">-er</span></div>
+      <div class="cr" style="--r:-.8deg"><span class="ci"><svg class="k" style="--c:#2B211B"><use href="#k0"/></svg><b class="brush">4</b></span><span class="ct">-el, -en, -er, -chen, -lein → ничего<small>Lehrer, Kuchen, Mädchen</small></span><span class="cend brush">Ø</span></div>
+      <div class="cr" style="--r:1.1deg"><span class="ci"><svg class="k" style="--c:#E2531D"><use href="#k0"/></svg><b class="brush">5</b></span><span class="ct">Гости, гласные, имена, сокращения<small>Auto, Oma, Handy, CD</small></span><span class="cend brush">-s</span></div>
+      <div class="cr" style="--r:-.6deg"><span class="ci"><svg class="k" style="--c:#F2B33D"><use href="#k0"/></svg><b class="brush">6</b></span><span class="ct">Артикль во множественном<small>die Hunde, die Kinder, die Frauen</small></span><span class="cend brush">die</span></div>
+    </div>
+    <div class="final-q c">
+      <h3 class="brush h2 red mega">Учи не слово. Учи пару</h3>
+      <p class="lede c">der Hund, die Hunde. Одна строчка в тетради. Минус сотня ошибок потом. Правило даёт направление. Привычка даёт скорость.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="band-wrap" aria-hidden="true" style="margin-bottom:-40px"><div class="band or"><div class="track">
+  <span class="brush">Stellas <svg class="k" style="--c:#F2B33D"><use href="#k4"/></svg> немецкий без воды <svg class="k" style="--c:#5A8ED2"><use href="#k2"/></svg> A0 → C1 <svg class="k" style="--c:#F29EA6"><use href="#k4"/></svg> один раз и навсегда <svg class="k" style="--c:#7D9442"><use href="#k2"/></svg></span>
+  <span class="brush">Stellas <svg class="k" style="--c:#F2B33D"><use href="#k4"/></svg> немецкий без воды <svg class="k" style="--c:#5A8ED2"><use href="#k2"/></svg> A0 → C1 <svg class="k" style="--c:#F29EA6"><use href="#k4"/></svg> один раз и навсегда <svg class="k" style="--c:#7D9442"><use href="#k2"/></svg></span>
+</div></div></div>
+
+<section class="s-nt plat" id="platform" style="padding-top:96px">
+  <div class="dec bob d2" style="right:2px;top:60px;z-index:3"><svg class="bfly flap" viewBox="-52 -42 104 84" style="--s:56px" aria-hidden="true"><g style="color:#F29EA6"><g><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><g transform="scale(-1 1)"><g class="wl"><path d="M-2 -3C-14 -36 -50 -40 -48 -14C-47 0 -24 4 -2 1Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-2 3C-24 4 -40 26 -24 34C-12 40 -4 22 -2 6Z" fill="currentColor" stroke="#2a1a12" stroke-width="1.4"/><path d="M-6 -12C-18 -34 -44 -36 -46 -16" fill="none" stroke="#2a1a12" stroke-width="5" stroke-opacity=".25"/><circle cx="-34" cy="-20" r="5" fill="#2a1a12"/><circle cx="-34" cy="-20" r="1.8" fill="#fff"/><circle cx="-20" cy="-10" r="3.2" fill="#2a1a12"/><circle cx="-18" cy="22" r="3.6" fill="#2a1a12"/><circle cx="-44" cy="-16" r="1.6" fill="#fff"/><circle cx="-40" cy="-28" r="1.6" fill="#fff"/></g></g><ellipse rx="3" ry="17" fill="#2a1a12"/><path d="M-1 -15Q-6 -30 -12 -34M1 -15Q6 -30 12 -34" stroke="#2a1a12" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="-12" cy="-34" r="2" fill="#2a1a12"/><circle cx="12" cy="-34" r="2" fill="#2a1a12"/></g></svg></div>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-sparkles"/></svg>Платформа · Stellas A0–C1</p>
+    <h2 class="brush h2 c mega">Этот гайд занял 12 минут. <span class="ylc">Таких 310+</span></h2>
+    <p class="lede c">Plural не живёт отдельно. Он сидит в каждом письме: Termine, Unterlagen, Kollegen. В каждом звонке. В каждом родительском чате.</p>
+    <div class="nums">
+      <div class="num" style="--r:-2deg"><b class="count" data-to="310">310+</b><span>гайдов от A0 до C1</span></div>
+      <div class="num" style="--r:1.5deg"><b class="count" data-to="2500">2500+</b><span>слов с озвучкой</span></div>
+      <div class="num" style="--r:-1deg"><b class="count" data-to="100">100+</b><span>студентов в наших клубах</span></div>
+    </div>
+    <div class="pains">
+      <div class="note rv" style="--r:-1.2deg"><div class="np">
+        <h4 class="brush red">Знакомо?</h4>
+        <ul>
+          <li><svg class="ic"><use href="#i-phone"/></svg><span>Созвон на работе. Коллеги говорят быстро. Ты киваешь и молишься, чтобы не спросили.</span></li>
+          <li><svg class="ic"><use href="#i-baby"/></svg><span>Ребёнок пошёл в школу и уже поправляет твой немецкий. Мило. Но обидно.</span></li>
+          <li><svg class="ic"><use href="#i-mail"/></svg><span>Письмо начальнику пишешь час. И всё равно боишься ошибки в каждом слове.</span></li>
+          <li><svg class="ic"><use href="#i-hourglass"/></svg><span>Экзамен через три месяца. С какой темы начинать, непонятно.</span></li>
+          <li><svg class="ic"><use href="#i-repeat"/></svg><span>Каждый январь открываешь немецкий с первой страницы. Снова.</span></li>
+        </ul>
+      </div></div>
+      <div class="note w yes rv" style="--r:1deg"><div class="np">
+        <h4 class="brush" style="color:#4f8a33">С Stellas</h4>
+        <ul>
+          <li><svg class="ic"><use href="#i-route"/></svg><span>Всё по порядку от A0 до C1. Открыл и знаешь, что учить дальше.</span></li>
+          <li><svg class="ic"><use href="#i-book-open"/></svg><span>Каждая тема: объяснение, видео, упражнение и разбор ответов.</span></li>
+          <li><svg class="ic"><use href="#i-audio-lines"/></svg><span>2500+ слов с озвучкой и транскрипцией. Слышишь, а не угадываешь.</span></li>
+          <li><svg class="ic"><use href="#i-message-circle"/></svg><span>Фразы для жизни из наших разговорных клубов: ресторан, врач, документы.</span></li>
+          <li><svg class="ic"><use href="#i-graduation-cap"/></svg><span>Экзамены: Goethe, telc, DTZ, ÖSD, TestDaF.</span></li>
+        </ul>
+      </div></div>
+    </div>
+
+    <div class="ladder rv" id="ladder">
+      <h5><svg class="ic"><use href="#i-route"/></svg>Путь по уровням · всё внутри</h5>
+      <div class="steps">
+        <span class="me" id="me"><svg class="k" style="--c:#E2531D"><use href="#k4"/></svg></span>
+        <div class="step" style="height:22%;background:#F2B33D">A0</div>
+        <div class="step" style="height:36%;background:#EE8C95">A1</div>
+        <div class="step" style="height:50%;background:#E2531D">A2</div>
+        <div class="step" style="height:66%;background:#7D9442">B1</div>
+        <div class="step" style="height:82%;background:#5A8ED2">B2</div>
+        <div class="step" style="height:100%;background:#2B211B">C1</div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <figure class="pol rv" style="--r:-2deg;--c:#E2531D"><span class="ph"><svg class="ic"><use href="#i-book-open"/></svg></span><figcaption>Грамматика</figcaption><p>310+ гайдов. Объяснение, видео, упражнение, разбор</p></figure>
+      <figure class="pol rv" style="--r:2deg;--c:#5A8ED2"><span class="ph"><svg class="ic"><use href="#i-audio-lines"/></svg></span><figcaption>Слова</figcaption><p>2500+ с озвучкой и транскрипцией</p></figure>
+      <figure class="pol rv" style="--r:1deg;--c:#7D9442"><span class="ph"><svg class="ic"><use href="#i-bot"/></svg></span><figcaption>Gemini-гайды</figcaption><p>Озвучка, три упражнения и проверка от ИИ</p></figure>
+      <figure class="pol rv" style="--r:-1.5deg;--c:#2B211B"><span class="ph"><svg class="ic"><use href="#i-graduation-cap"/></svg></span><figcaption>Экзамены</figcaption><p>Goethe · telc · DTZ · ÖSD · TestDaF</p></figure>
+      <figure class="pol rv" style="--r:-1deg;--c:#F2B33D"><span class="ph"><svg class="ic"><use href="#i-calendar-check"/></svg></span><figcaption>Трекер</figcaption><p>Умный трекер в Notion и флеш-карты</p></figure>
+      <figure class="pol rv" style="--r:2deg;--c:#EE8C95"><span class="ph"><svg class="ic"><use href="#i-clapperboard"/></svg></span><figcaption>Фильмы и книги</figcaption><p>Фильмы, книги, подкасты. Уже по уровням</p></figure>
+      <figure class="pol rv" style="--r:-2deg;--c:#D8451B"><span class="ph"><svg class="ic"><use href="#i-message-circle"/></svg></span><figcaption>Лексика для жизни</figcaption><p>Ресторан, врач, касса. Из наших клубов</p></figure>
+      <figure class="pol rv" style="--r:1.5deg;--c:#5B4A3F"><span class="ph"><svg class="ic"><use href="#i-wifi-off"/></svg></span><figcaption>Офлайн</figcaption><p>Работает в приложении Notion без интернета</p></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s-cr plat2">
+  <svg class="tear" aria-hidden="true"><use href="#tear2"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-eye"/></svg>Как это выглядит · Вживую</p>
+    <h2 class="brush h2 c red mega">Не обещания. Экран</h2>
+    <div class="showcase">
+      <div>
+        <div class="phone"><video class="vid" muted loop playsinline preload="none" data-poster="media/app-mobile.jpg"><source src="media/app-mobile.mp4" type="video/mp4"></video></div>
+        <p class="fcap c"><b>С телефона.</b> Карточки, озвучка, прогресс. Пять минут в трамвае тоже считаются.</p>
+      </div>
+      <div class="frames">
+        <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Gemini · гайд с озвучкой</span></div><video class="vid" muted loop playsinline preload="none" data-poster="media/v-gemini.webp"><source src="media/v-gemini.mp4" type="video/mp4"></video></div><p class="fcap"><b>Нажал на слово и услышал.</b> Плюс три упражнения с проверкой от ИИ.</p></div>
+        <div><div class="browser"><div class="bar"><i></i><i></i><i></i><span>Stellas · Der, Die, Das</span></div><video class="vid" muted loop playsinline preload="none" data-poster="media/derdiedas.jpg"><source src="media/derdiedas.mp4" type="video/mp4"></video></div><p class="fcap"><b>Роды как персонажи.</b> Запоминаются сами. Как наши пять детей с окончаниями.</p></div>
+      </div>
+    </div>
+
+    <div class="gem">
+      <div class="rv">
+        <p class="eyebrow" style="justify-content:flex-start"><svg class="ic"><use href="#i-bot"/></svg>Новое · Gemini-гайды B1–C1</p>
+        <h3 class="brush h3 red">Не гайд. <span class="ink">Приложение</span></h3>
+        <p class="lede l">Под темы, которые реально встречаются на TestDaF, Goethe C1 и telc.</p>
+      </div>
+      <dl class="spec rv">
+        <div><dt>Словарь</dt><dd>20+ слов и 15 фраз B2–C1. МФА, примеры, озвучка у каждого</dd></div>
+        <div><dt>Текст</dt><dd>4–5 абзацев как из немецкой газеты. Нажал на предложение, получил перевод</dd></div>
+        <div><dt>Диалоги</dt><dd>Три штуки. От болтовни до конфликта</dd></div>
+        <div><dt>Тест</dt><dd>6 вопросов с разбором нюанса</dd></div>
+        <div><dt>Чат с ИИ</dt><dd>Пишешь на немецком, собеседник отвечает в образе</dd></div>
+      </dl>
+    </div>
+
+    <div class="browser rv" style="margin-top:34px"><div class="bar"><i></i><i></i><i></i><span>Stellas · гайд по грамматике</span></div><video class="vid" muted loop playsinline preload="none" data-poster="media/v-guide.webp"><source src="media/v-guide.mp4" type="video/mp4"></video></div>
+    <p class="fcap c">Объяснение, видео, упражнение и ответы с разбором. Как этот гайд, только без пуговиц.</p>
+
+    <div class="shots" aria-label="Скриншоты платформы">
+      <figure class="shot" style="--r:-1.5deg"><img src="media/p6-tracker.webp" alt="Трекер прогресса в Notion" loading="lazy"><figcaption>Трекер прогресса</figcaption></figure>
+      <figure class="shot" style="--r:1.2deg"><img src="media/p8-situations.webp" alt="Лексика по жизненным ситуациям" loading="lazy"><figcaption>Врач, касса, транспорт</figcaption></figure>
+      <figure class="shot" style="--r:-1deg"><img src="media/p4-words.webp" alt="Карточки слов с озвучкой" loading="lazy"><figcaption>Слова по темам</figcaption></figure>
+      <figure class="shot" style="--r:1.4deg"><img src="media/p7-work.webp" alt="Лексика: работа и документы" loading="lazy"><figcaption>Работа и документы</figcaption></figure>
+    </div>
+
+    <p class="eyebrow" style="margin-top:40px"><svg class="ic"><use href="#i-message-circle"/></svg>Отзывы · Как есть</p>
+    <h3 class="brush h3 c red">Что пишут студенты</h3>
+    <div class="revs">
+      <img src="media/r5.webp" alt="Отзыв студента о платформе" loading="lazy">
+      <img src="media/r1.webp" alt="Отзыв студента о платформе" loading="lazy">
+      <img src="media/r3.webp" alt="Отзыв студента о платформе" loading="lazy">
+      <img src="media/r2.webp" alt="Отзыв студента о платформе" loading="lazy">
+      <img src="media/r4.webp" alt="Отзыв студента о платформе" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="s-yl" id="price">
+  <svg class="tear" aria-hidden="true"><use href="#tear"/></svg>
+  <div class="wrap">
+    <p class="eyebrow"><svg class="ic"><use href="#i-coins"/></svg>Цена · Один раз</p>
+    <h2 class="brush h2 c red mega">Дешевле одного <span class="ink">урока с репетитором</span></h2>
+    <div class="prices">
+      <article class="price a rv">
+        <span class="ghost" aria-hidden="true">A</span>
+        <h3 class="brush">A0–A2</h3>
+        <div class="pills"><span class="tag">С нуля</span><span class="tag f">для старта</span></div>
+        <div class="amount">20 €</div>
+        <dl class="spec"><div><dt>Для кого</dt><dd>Кто начинает с алфавита</dd></div><div><dt>Внутри</dt><dd>Грамматика, лексика, фразы для жизни, трекер</dd></div><div><dt>Доступ</dt><dd>Навсегда</dd></div></dl>
+        <a class="btn" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать A0–A2</a>
+      </article>
+      <article class="price b rv">
+        <span class="ghost" aria-hidden="true">B</span>
+        <h3 class="brush">B1–C1</h3>
+        <div class="pills"><span class="tag">Уже в теме</span><span class="tag y">экзамены</span></div>
+        <div class="amount">20 €</div>
+        <dl class="spec"><div><dt>Для кого</dt><dd>Кто идёт к B1, B2 или C1</dd></div><div><dt>Внутри</dt><dd>Gemini-гайды, раздел экзаменов, сложная грамматика</dd></div><div><dt>Доступ</dt><dd>Навсегда</dd></div></dl>
+        <a class="btn y" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать B1–C1</a>
+      </article>
+      <article class="price c rv">
+        <span class="ribbon">Выгоднее</span>
+        <span class="ghost" aria-hidden="true">C</span>
+        <h3 class="brush red">A0–C1</h3>
+        <div class="pills"><span class="tag">Обе платформы</span><span class="tag y">+ A0–A2 на украинском</span></div>
+        <div class="amount">30 € <s>40 €</s></div>
+        <dl class="spec"><div><dt>Для кого</dt><dd>Кто хочет весь путь и не платить дважды</dd></div><div><dt>Внутри</dt><dd>310+ гайдов, 2500+ слов, экзамены, фильмы и книги, трекер</dd></div><div><dt>Обновления</dt><dd>Бесплатно для купивших</dd></div></dl>
+        <a class="btn o big" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать всё за 30 € <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+    </div>
+    <p class="fine">Платформа сделана в Notion. Скачиваешь приложение на телефон или ноутбук и заходишь даже без интернета. Платишь один раз, доступ навсегда. После новых обновлений цена может вырасти, но для тех, кто уже купил, обновления бесплатны. Вопросы пиши в Telegram: <a href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">@stellasdeutsch</a></p>
+
+    <div class="final" style="margin-top:60px">
+      <h2 class="brush h2 red mega">Plural ты уже понял. <span class="ink">Осталось 309 тем</span></h2>
+      <p class="lede c">Это не страшно. Это просто язык. Держи его на губах, а не в голове.</p>
+      <div class="cta-row"><a class="btn o big" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Хочу всю систему <svg class="ic"><use href="#i-arrow-right"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap"><span>Stellas · немецкий без воды</span><span>Гайд: Plural · 2026</span></div></footer>
+
+
+<div class="dock" id="dock" aria-hidden="true">
+  <p><b>30 €</b>A0–C1 · навсегда</p>
+  <a class="btn y" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener" tabindex="-1">Забрать платформу <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+</div>
+
+
+<script>
+function plInit(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var G = window.gsap && window.ScrollTrigger ? window.gsap : null;
+  if(G){ try{ G.registerPlugin(ScrollTrigger); window.SplitText && G.registerPlugin(SplitText); window.MotionPathPlugin && G.registerPlugin(MotionPathPlugin); }catch(e){ G = null; } }
+  if(G){ document.documentElement.classList.add('gs'); ScrollTrigger.config({ignoreMobileResize:true}); }
+  var MP = G && window.MotionPathPlugin, ST = G && window.SplitText;
+  var AD = !!document.getElementById('platform');
+  function $(s,r){ return (r||document).querySelector(s); }
+  function $$(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+  var VOL = '<svg class="ic"><use href="#i-volume-2"/></svg>';
+
+  /* ---------- speech ---------- */
+  var tts = 'speechSynthesis' in window;
+  if(!tts) document.documentElement.classList.add('no-tts');
+  var deVoice = null;
+  function pickVoice(){ try{ var v = speechSynthesis.getVoices(); deVoice = v.find(function(x){ return /^de/i.test(x.lang); }) || null; }catch(e){} }
+  if(tts){ pickVoice(); try{ speechSynthesis.onvoiceschanged = pickVoice; }catch(e){} }
+  function say(text, btn){
+    if(!tts || !text) return;
+    try{
+      speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'de-DE'; u.rate = .88; if(deVoice) u.voice = deVoice;
+      if(btn){ btn.classList.add('on'); u.onend = u.onerror = function(){ btn.classList.remove('on'); }; }
+      speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-say]');
+    if(!b || b.closest('.fc')) return;
+    say(b.dataset.say, b.classList.contains('say') ? b : null);
+  });
+
+  function whenVisible(el, on, off, th){
+    if(!el) return;
+    if(!('IntersectionObserver' in window)){ on(); return; }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ en.isIntersecting ? on() : (off && off()); }); }, {threshold:th||.25}).observe(el);
+  }
+
+  /* ---------- torn paper edges ---------- */
+  function jag(){
+    var p = [], i;
+    for(i=0;i<=10;i++) p.push((i*10)+'% '+rnd(0,6).toFixed(1)+'px');
+    for(i=1;i<10;i++) p.push('calc(100% - '+rnd(0,4).toFixed(1)+'px) '+(i*10)+'%');
+    for(i=10;i>=0;i--) p.push((i*10)+'% calc(100% - '+rnd(0,6).toFixed(1)+'px)');
+    for(i=9;i>=1;i--) p.push(rnd(0,4).toFixed(1)+'px '+(i*10)+'%');
+    return 'polygon('+p.join(',')+')';
+  }
+  $$('.note>.np').forEach(function(np){ np.style.setProperty('--clip', jag()); });
+
+  /* ---------- flip letters ---------- */
+  function buildFlip(el){
+    var a = el.dataset.from, b = el.dataset.to, n = Math.max(a.length, b.length), html = '';
+    for(var i=0;i<n;i++){
+      var x = a[i]||'', y = b[i]||'';
+      html += x===y ? '<span>'+x+'</span>' : x==='' ? '<span class="fl ad"><i class="fb">'+y+'</i></span>' : '<span class="fl"><i class="fa">'+x+'</i><i class="fb">'+y+'</i></span>';
+    }
+    el.innerHTML = html;
+  }
+  $$('.flip[data-from]').forEach(buildFlip);
+
+  /* ---------- tap objects: singular → plural bubble ---------- */
+  var pop = document.createElement('div'); pop.className = 'plpop off'; pop.setAttribute('aria-live','polite'); document.body.appendChild(pop);
+  var popT = null;
+  function showPl(el){
+    var d = el.dataset.pl.split('|');
+    pop.innerHTML = d[0] + ' → <b>' + d[1] + '</b><small>' + d[2] + '</small>';
+    pop.classList.remove('off');
+    var r = el.getBoundingClientRect(), w = pop.offsetWidth, vw = document.documentElement.clientWidth;
+    var x = Math.min(Math.max(r.left + r.width/2, w/2 + 8), vw - w/2 - 8);
+    pop.style.left = (x + window.scrollX) + 'px';
+    pop.style.top = (r.top + window.scrollY + Math.min(r.height*.35, 60)) + 'px';
+    say(d[0] + '. ' + d[1]);
+    if(G && !reduce) G.fromTo(el, {scale:.82, rotation:-8}, {scale:1, rotation:0, duration:.8, ease:'elastic.out(1,.35)'});
+    clearTimeout(popT); popT = setTimeout(function(){ pop.classList.add('off'); }, 2600);
+  }
+  $$('[data-pl]').forEach(function(el){
+    el.addEventListener('click', function(){ showPl(el); });
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); showPl(el); } });
+  });
+  window.addEventListener('scroll', function(){ if(!pop.classList.contains('off')) pop.classList.add('off'); }, {passive:true});
+
+  /* ---------- reveal ---------- */
+  $$('.stg').forEach(function(g){ Array.prototype.forEach.call(g.children, function(c,i){ c.style.setProperty('--i', i); }); });
+  if(G && !reduce){
+    $$('.mega').forEach(function(h){
+      var targets = h;
+      if(ST){ try{ var sp = new SplitText(h, {type:'words', wordsClass:'wd'}); targets = sp.words; }catch(e){} }
+      G.from(targets, {yPercent:60, rotation:6, transformOrigin:'0% 100%', duration:.85, ease:'back.out(2)', stagger:.05, scrollTrigger:{trigger:h, start:'top 88%', once:true}});
+    });
+    G.set('.rv', {y:46});
+    ScrollTrigger.batch('.rv', {start:'top 94%', once:true, onEnter:function(b){ G.to(b, {y:0, duration:.9, ease:'power3.out', stagger:.08}); }});
+    $$('.stg').forEach(function(g){
+      G.from(g.children, {y:34, scale:.92, rotation:function(){ return rnd(-5,5); }, duration:.7, ease:'back.out(1.8)', stagger:.07, scrollTrigger:{trigger:g, start:'top 88%', once:true}});
+    });
+    ScrollTrigger.batch('.pol', {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:-70, rotation:function(){ return rnd(-14,14); }, scale:.85, duration:.9, ease:'back.out(1.7)', stagger:.1}); }});
+    ScrollTrigger.batch('.kid', {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:70, rotation:function(){ return rnd(-6,6); }, duration:.9, ease:'back.out(1.6)', stagger:.1}); G.from($$('.end', b[0].parentNode), {scale:.4, rotation:-30, duration:.8, ease:'elastic.out(1,.45)', stagger:.1, delay:.2}); }});
+    ScrollTrigger.batch('.suf', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {scale:.6, rotation:function(){ return rnd(-14,14); }, duration:.7, ease:'back.out(2.4)', stagger:.05}); }});
+    ScrollTrigger.batch('.fc', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {y:-120, rotation:function(){ return rnd(-180,180); }, duration:1, ease:'bounce.out', stagger:.06}); }});
+    ScrollTrigger.batch('.env', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {y:60, rotation:function(){ return rnd(-20,20); }, duration:.8, ease:'back.out(2)', stagger:.07}); }});
+    ScrollTrigger.batch('.num', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {y:40, scale:.7, duration:.7, ease:'back.out(2.4)', stagger:.08}); }});
+
+    // hero: balloons drift up on scroll, flowers spin
+    G.to('.hero .bal.b1', {y:-160, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    G.to('.hero .bal.b2', {y:-240, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    G.to('.hero .bal.b3', {y:-120, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    G.to('.hero .bal.b4', {y:-200, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    G.to('.hero .row', {y:40, ease:'none', scrollTrigger:{trigger:'.hero', start:'top top', end:'bottom top', scrub:true}});
+    // progress
+    G.to('#prog', {scaleX:1, ease:'none', scrollTrigger:{trigger:'main', start:'top top', end:'bottom bottom', scrub:.3}});
+    // route thread
+    G.fromTo('#rtFill', {scaleX:0}, {scaleX:1, ease:'none', scrollTrigger:{trigger:'#route', start:'top 80%', end:'bottom 30%', scrub:.5}});
+    G.from('.stop .dot', {scale:.3, rotation:-200, duration:.8, ease:'back.out(2.4)', stagger:.07, scrollTrigger:{trigger:'#route', start:'top 85%', once:true}});
+    // marquee bands
+    $$('.track').forEach(function(tr){
+      var dir = tr.closest('.band.or') ? 1 : -1;
+      var loop = G.fromTo(tr, {xPercent: dir<0 ? 0 : -50}, {xPercent: dir<0 ? -50 : 0, duration:30, ease:'none', repeat:-1});
+      var band = tr.parentNode, baseRot = band.classList.contains('or') ? 1.6 : -2.2;
+      ScrollTrigger.create({trigger:band, start:'top bottom', end:'bottom top', onUpdate:function(self){
+        var v = self.getVelocity();
+        G.to(loop, {timeScale: 1 + Math.min(Math.abs(v)/300, 6), duration:.2, overwrite:true});
+        G.to(loop, {timeScale:1, duration:1.2, delay:.25, overwrite:false});
+        G.to(band, {skewX: G.utils.clamp(-8, 8, v/-260), rotation: baseRot, duration:.4, overwrite:true});
+      }});
+    });
+    // counters
+    $$('.count').forEach(function(c){
+      var to = +c.dataset.to, o = {v:0};
+      ScrollTrigger.create({trigger:c, start:'top 92%', once:true, onEnter:function(){
+        G.to(o, {v:to, duration:1.6, ease:'power2.out', onUpdate:function(){ c.textContent = Math.round(o.v) + '+'; }});
+      }});
+    });
+    // ladder
+    var steps = $$('#ladder .step'), me = $('#me');
+    if(steps.length){
+      G.from(steps, {scaleY:.15, duration:.9, ease:'elastic.out(1,.6)', stagger:.1, scrollTrigger:{trigger:'#ladder', start:'top 85%', once:true}});
+      var htl = G.timeline({repeat:-1, repeatDelay:1.2, paused:true});
+      function pos(i){ var s = steps[i], p = s.parentNode.getBoundingClientRect(), r = s.getBoundingClientRect(); return {x:r.left - p.left + r.width/2 - 17, y:r.top - p.top - 36}; }
+      function buildHop(){
+        htl.clear(); var p0 = pos(0); G.set(me, {x:p0.x, y:p0.y, rotation:0});
+        for(var i=1;i<steps.length;i++){
+          var a = pos(i-1), b = pos(i);
+          if(MP) htl.to(me, {motionPath:{path:[{x:a.x,y:a.y},{x:(a.x+b.x)/2,y:Math.min(a.y,b.y)-50},{x:b.x,y:b.y}], curviness:1.4}, rotation:'+=180', duration:.5, ease:'power1.inOut'});
+          else htl.to(me, {x:b.x, y:b.y, duration:.5});
+          htl.to(me, {scaleY:.7, scaleX:1.2, duration:.08, yoyo:true, repeat:1});
+        }
+      }
+      whenVisible($('#ladder'), function(){ buildHop(); htl.restart(); }, function(){ htl.pause(); });
+    }
+  } else if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {rootMargin:'0px 0px 8% 0px', threshold:.12});
+    $$('.rv,.stg').forEach(function(el){ io.observe(el); });
+  }
+  if(!G && AD){ var lad = $('#me'); if(lad) lad.style.display = 'none'; }
+
+  /* ---------- stem with button-umlaut ---------- */
+  function stemHTML(s, u, on){
+    var h = '';
+    for(var i=0;i<s.length;i++){
+      if(i===u) h += '<span class="uv'+(on?' on':'')+'">'+s[i]+'<span class="dots"><svg class="k"><use href="#k2"/></svg><svg class="k"><use href="#k2"/></svg></span></span>';
+      else h += s[i];
+    }
+    return h;
+  }
+  function dropDots(uv, delay){
+    uv.classList.add('on');
+    if(G && !reduce) G.fromTo($$('.dots svg', uv), {y:-110, rotation:-220}, {y:0, rotation:0, duration:.95, ease:'bounce.out', stagger:.12, delay:delay||0});
+  }
+
+  /* ---------- delivery: balloons carry endings ---------- */
+  (function(){
+    var D = [
+      {art:'der', s:'Hund', u:-1, e:'e', ru:'собака → собаки', say:'der Hund. die Hunde', cap:'<b>-e.</b> Самый популярный. Его получают почти все мужчины и большая часть das. der Hund → die Hunde.'},
+      {art:'die', s:'Frau', u:-1, e:'en', ru:'женщина → женщины', say:'die Frau. die Frauen', cap:'<b>-(e)n.</b> Окончание женщин. die Frau → die Frauen. Если слово уже на -e, хватит одной n: Lampe → Lampen.'},
+      {art:'das', s:'Buch', u:1, e:'er', ru:'книга → книги', say:'das Buch. die Bücher', cap:'<b>-er.</b> Маленький клуб. И почти всегда с пуговками сверху: Buch → Bücher.'},
+      {art:'das', s:'Auto', u:-1, e:'s', ru:'машина → машины', say:'das Auto. die Autos', cap:'<b>-s.</b> Для гостей и слов на гласную. das Auto → die Autos. Как в английском. Но только для иностранцев.'},
+      {art:'der', s:'Lehrer', u:-1, e:'', ru:'учитель → учителя', say:'der Lehrer. die Lehrer', cap:'<b>Ноль.</b> Шарик прилетел пустой. der Lehrer → die Lehrer. Меняется только артикль. Вот почему Brötchen остался Brötchen.'}
+    ];
+    var box = $('#deliv'); if(!box) return;
+    var balls = $$('.eb', box), art = $('#dArt'), stem = $('#dStem'), end = $('#dEnd'), ru = $('#dRu'), cap = $('#dCap'), sayB = $('#dSay'), dots = $$('#dDots i');
+    var cur = 0, auto = null, busy = null;
+    function finish(d){
+      end.classList.remove('hide'); art.classList.add('to');
+      var uv = $('.uv', stem); if(uv) dropDots(uv, .1);
+      if(G && !reduce) G.fromTo(end, {scale:.3, rotation:-24}, {scale:1, rotation:0, duration:.8, ease:'elastic.out(1,.45)'});
+    }
+    function setD(i, animate){
+      cur = (i + D.length) % D.length; var d = D[cur];
+      if(busy){ busy.kill(); busy = null; balls.forEach(function(b){ G && G.set(b, {x:0, y:0, rotation:0, scale:1, opacity:1}); b.classList.remove('on'); }); }
+      dots.forEach(function(x,k){ x.classList.toggle('on', k <= cur); });
+      cap.innerHTML = d.cap; sayB.dataset.say = d.say; ru.textContent = d.ru;
+      art.dataset.from = d.art; art.dataset.to = 'die'; buildFlip(art); art.classList.remove('to');
+      stem.innerHTML = stemHTML(d.s, d.u, false);
+      end.textContent = d.e || 'Ø'; end.className = 'end hide' + (d.e ? '' : ' zero');
+      if(!animate || !G || !MP || reduce){ finish(d); return; }
+      var b = balls[cur]; b.classList.add('on');
+      var br = b.getBoundingClientRect(), er = end.getBoundingClientRect(), wr = $('.word', box).getBoundingClientRect();
+      var dx = (er.left + 8) - (br.left + br.width/2), dy = (wr.top - 6) - (br.top + br.height*.58);
+      busy = G.timeline({onComplete:function(){ b.classList.remove('on'); busy = null; }});
+      busy.to(b, {motionPath:{path:[{x:0,y:0},{x:dx*.4, y:-30},{x:dx, y:dy}], curviness:1.4}, rotation:dx>0?14:-14, duration:1.05, ease:'power2.inOut'})
+          .add(function(){ finish(d); })
+          .to(b, d.e ? {scale:.92, duration:.15, yoyo:true, repeat:1} : {scale:1.6, opacity:0, duration:.25})
+          .to(b, {x:0, y:0, rotation:0, scale:1, opacity:1, duration:.9, ease:'power2.inOut'}, '+=.55');
+    }
+    function play(){ clearInterval(auto); setD(0, true); var k = 0; auto = setInterval(function(){ k++; if(k >= D.length){ clearInterval(auto); return; } setD(k, true); }, 3800); }
+    $('#dNext').onclick = function(){ clearInterval(auto); setD(cur+1, true); };
+    $('#dPrev').onclick = function(){ clearInterval(auto); setD(cur-1, true); };
+    $('#dReplay').onclick = play;
+    balls.forEach(function(b){ b.onclick = function(){ clearInterval(auto); setD(+b.dataset.i, true); say(D[+b.dataset.i].say); }; });
+    setD(0, false);
+    var played = false;
+    if(!reduce) whenVisible(box, function(){ if(!played){ played = true; setTimeout(play, 300); } }, null, .45);
+  })();
+
+  /* ---------- article flip: everyone becomes die ---------- */
+  (function(){
+    var host = $('#arts'); if(!host) return;
+    var flips = $$('.flip', host), abs = $$('.ab', host), t = null;
+    function tick(){
+      var to = !flips[0].classList.contains('to');
+      flips.forEach(function(f){ f.classList.toggle('to', to); });
+      if(G && !reduce && to) G.fromTo(abs.slice(0,2), {y:0}, {y:-18, duration:.3, yoyo:true, repeat:1, ease:'power2.out', stagger:.1});
+    }
+    if(reduce){ flips.forEach(function(f){ f.classList.add('to'); }); return; }
+    whenVisible(host, function(){ if(t) return; setTimeout(tick, 500); t = setInterval(tick, 2400); }, function(){ clearInterval(t); t = null; });
+  })();
+
+  /* ---------- umlaut lab ---------- */
+  (function(){
+    var U = [
+      ['der Apfel','Apfel',0,'','die Äpfel',1,'ноль + умлаут'],
+      ['das Haus','Haus',1,'er','die Häuser',1,'-er + умлаут'],
+      ['der Stuhl','Stuhl',2,'e','die Stühle',1,'-e + умлаут'],
+      ['die Hand','Hand',1,'e','die Hände',1,'-e + умлаут'],
+      ['das Buch','Buch',1,'er','die Bücher',1,'-er + умлаут'],
+      ['der Vogel','Vogel',1,'','die Vögel',1,'ноль + умлаут'],
+      ['der Hund','Hund',1,'e','die Hunde',0,'-e, без пуговок'],
+      ['der Tag','Tag',1,'e','die Tage',0,'-e, без пуговок']
+    ];
+    var host = $('#ulab'); if(!host) return;
+    host.innerHTML = U.map(function(w,i){
+      return '<button class="ut note'+(w[5]?'':' no')+'" type="button" data-i="'+i+'" style="--r:'+(i%2?1.4:-1.4)+'deg" aria-label="'+w[0]+', множественное: '+w[4]+'"><span class="np">' +
+        '<span class="sg">'+w[0]+'</span><span class="pw brush">'+stemHTML(w[1], w[5]?w[2]:-1, !!w[5])+'<span class="end">'+w[3]+'</span></span>' +
+        '<span class="art2">'+w[4]+'</span><span class="why">'+w[6]+'</span></span></button>';
+    }).join('');
+    $$('.ut .np', host).forEach(function(np){ np.style.setProperty('--clip', jag()); });
+    var tiles = $$('.ut', host), demo = null, touched = false, di = 0;
+    function act(t){
+      var w = U[+t.dataset.i], uv = $('.uv', t), en = $('.end', t);
+      if(uv) uv.classList.remove('on'); en.classList.add('hide');
+      setTimeout(function(){
+        if(uv) dropDots(uv);
+        setTimeout(function(){ en.classList.remove('hide'); if(G && !reduce) G.fromTo(en, {scale:.3, y:-20}, {scale:1, y:0, duration:.6, ease:'back.out(3)'}); }, uv ? 550 : 150);
+      }, 120);
+      if(G && !reduce && !uv) G.fromTo(t, {x:-6}, {x:0, duration:.5, ease:'elastic.out(1.2,.25)'});
+    }
+    tiles.forEach(function(t){ t.onclick = function(){ touched = true; clearInterval(demo); act(t); say(U[+t.dataset.i][0] + '. ' + U[+t.dataset.i][4]); }; });
+    if(!reduce) whenVisible(host, function(){
+      if(touched || demo) return;
+      demo = setInterval(function(){ if(touched){ clearInterval(demo); return; } act(tiles[di]); di = (di+1) % tiles.length; }, 1700);
+    }, function(){ clearInterval(demo); demo = null; });
+  })();
+
+  /* ---------- flow: four questions ---------- */
+  function flow(el){
+    var scen = JSON.parse(el.dataset.flow), nodes = $$('.fn', el), nos = $$('.fno', el), fq = $('.fq', el), fa = $('.fa', el), si = 0, timers = [], running = false;
+    function clear(){ timers.forEach(clearTimeout); timers = []; }
+    function reset(){ nodes.forEach(function(n){ n.classList.remove('chk','hit','miss'); }); nos.forEach(function(n){ n.classList.remove('on'); }); fa.classList.remove('on'); fa.textContent = ''; }
+    function run(){
+      reset(); var s = scen[si]; fq.textContent = s.t;
+      if(G) G.fromTo(fq, {y:-18, rotation:-8, scale:.85}, {y:0, rotation:0, scale:1, duration:.55, ease:'back.out(2.5)'});
+      for(var i=0;i<=s.hit;i++){
+        (function(i){
+          timers.push(setTimeout(function(){
+            nodes.forEach(function(n){ n.classList.remove('chk'); });
+            nodes[i].classList.add('chk');
+            if(i < s.hit){ timers.push(setTimeout(function(){ nodes[i].classList.remove('chk'); nodes[i].classList.add('miss'); nos[i] && nos[i].classList.add('on'); }, 420)); }
+            else {
+              nodes[i].classList.remove('chk'); nodes[i].classList.add('hit');
+              fa.textContent = '→ ' + s.a; fa.classList.add('on');
+              var r = $('.res', nodes[i]);
+              if(G && !reduce){ G.fromTo(r, {scale:.4, rotation:16}, {scale:1, rotation:0, duration:.7, ease:'elastic.out(1,.4)'}); G.fromTo(fa, {scale:.6}, {scale:1, duration:.6, ease:'back.out(3)'}); }
+            }
+          }, 600 + i*800));
+        })(i);
+      }
+      timers.push(setTimeout(function(){ si = (si+1) % scen.length; if(running) run(); }, 600 + (s.hit+1)*800 + 2600));
+    }
+    (function(){ var s = scen[0]; for(var i=0;i<s.hit;i++){ nodes[i].classList.add('miss'); nos[i] && nos[i].classList.add('on'); } nodes[s.hit].classList.add('hit'); fa.textContent = '→ ' + s.a; fa.classList.add('on'); })();
+    if(!reduce) whenVisible(el, function(){ if(running) return; running = true; run(); }, function(){ running = false; clear(); }, .2);
+  }
+  $$('.flow[data-flow]').forEach(flow);
+  var _say = say;
+
+  /* ---------- suffix factory ---------- */
+  (function(){
+    var F = [
+      ['die Zeit<em>ung</em>','die Zeitung<em>en</em>','-ung → -en'],
+      ['die Frei<em>heit</em>','die Freiheit<em>en</em>','-heit → -en'],
+      ['die Lehrer<em>in</em>','die Lehrerin<em>nen</em>','-in → -innen'],
+      ['das Ergeb<em>nis</em>','die Ergebnis<em>se</em>','-nis → -nisse'],
+      ['der Schmetter<em>ling</em>','die Schmetterling<em>e</em>','-ling → -e'],
+      ['der Irr<em>tum</em>','die Irrt<em>ümer</em>','-tum → -tümer'],
+      ['das Häs<em>chen</em>','die Häschen <em>Ø</em>','-chen → Ø'],
+      ['das Kin<em>o</em>','die Kino<em>s</em>','-o → -s'],
+      ['die Universi<em>tät</em>','die Universität<em>en</em>','-tät → -en'],
+      ['die Möglich<em>keit</em>','die Möglichkeit<em>en</em>','-keit → -en']
+    ];
+    var fin = $('#fIn'), fout = $('#fOut'), mach = $('#mach'), log = $('#mlog'), i = 0, t = null;
+    if(!fin) return;
+    function tick(){
+      var it = F[i]; i = (i+1) % F.length;
+      fin.innerHTML = it[0];
+      if(G && !reduce){
+        G.timeline().fromTo(fin, {y:-30, opacity:0, scale:1}, {y:0, opacity:1, duration:.35, ease:'back.out(2)'})
+          .to(fin, {y:64, scale:.35, opacity:0, duration:.45, ease:'power2.in'}, '+=.45');
+      }
+      setTimeout(function(){ mach.classList.remove('work'); void mach.offsetWidth; mach.classList.add('work'); }, reduce ? 0 : 1150);
+      setTimeout(function(){
+        fout.innerHTML = it[1];
+        if(G && !reduce) G.fromTo(fout, {y:-46, scale:.4, rotation:-10}, {y:0, scale:1, rotation:0, duration:.7, ease:'back.out(2.6)'});
+        var s = document.createElement('span'); s.innerHTML = it[2].replace('→', '→ <em>') + '</em>';
+        log.insertBefore(s, log.firstChild); while(log.children.length > 4) log.removeChild(log.lastChild);
+        if(G && !reduce) G.from(s, {scale:.4, duration:.5, ease:'back.out(3)'});
+      }, reduce ? 0 : 1650);
+    }
+    if(!reduce) whenVisible($('#fab'), function(){ if(t) return; tick(); t = setInterval(tick, 2900); }, function(){ clearInterval(t); t = null; if(G) G.set(fin, {clearProps:'all'}); });
+  })();
+
+  /* ---------- gender panels ---------- */
+  $$('.gp[data-set]').forEach(function(p){
+    var set = JSON.parse(p.dataset.set), m = $('.morph', p), sb = $('.say', p), i = 0, ph = 0, t = null;
+    function draw(){
+      var w = set[i];
+      m.innerHTML = '<span class="flip ma" data-from="'+w[0]+'" data-to="die"></span><span class="flip mw" data-from="'+w[1]+'" data-to="'+w[2]+'"></span>';
+      $$('.flip', m).forEach(buildFlip); sb.dataset.say = w[0]+' '+w[1]+'. die '+w[2];
+    }
+    draw();
+    function tick(){ if(ph === 0){ $$('.flip', m).forEach(function(f){ f.classList.add('to'); }); ph = 1; } else { i = (i+1) % set.length; draw(); ph = 0; if(G && !reduce) G.from(m, {x:-20, duration:.4, ease:'power2.out'}); } }
+    if(reduce){ $$('.flip', m).forEach(function(f){ f.classList.add('to'); }); return; }
+    whenVisible(p, function(){ if(t) return; t = setInterval(tick, 1500); }, function(){ clearInterval(t); t = null; });
+  });
+
+  /* ---------- traps: letters ---------- */
+  (function(){
+    var L = [
+      {k:'Подвох 1', h:'Одно слово. Два plural', p:[['die Bank','die B<em>ä</em>nk<em>e</em>','скамейки','die Bänke'],['die Bank','die Bank<em>en</em>','банки','die Banken']], j:'Сидеть на Banken неудобно. Хранить деньги в Bänken тоже.'},
+      {k:'Подвох 2', h:'Мама или гайка', p:[['die Mutter','die M<em>ü</em>tter','мамы','die Mütter'],['die Mutter','die Mutter<em>n</em>','гайки','die Muttern']], j:'На восьмое марта поздравляй Mütter. Muttern оставь на стройке.'},
+      {k:'Подвох 3', h:'Wörter или Worte', p:[['das Wort','die W<em>ö</em>rt<em>er</em>','отдельные слова, как в словаре','die Wörter'],['das Wort','die Wort<em>e</em>','сказанное, речь, цитата','die Worte']], j:'Wörterbuch учит слова. Schöne Worte говорят на свадьбе.'},
+      {k:'Подвох 4', h:'Только много', p:[['—','die Eltern','родители','die Eltern'],['—','die Leute','люди','die Leute'],['—','die Ferien','каникулы','die Ferien'],['—','die Geschwister','братья и сёстры','die Geschwister']], j:'Одного родителя одним словом не назовёшь. Только der Elternteil. Звучит как запчасть.'},
+      {k:'Подвох 5', h:'Только одно', p:[['das Obst','—','фрукты','das Obst'],['die Milch','—','молоко','die Milch'],['der Durst','—','жажда','der Durst'],['das Gepäck','—','багаж','das Gepäck']], j:'Купил килограмм Obst. Не Obste. Фрукты лежат одной кучей.'},
+      {k:'Подвох 6', h:'Латинские гости', p:[['das Museum','die Muse<em>en</em>','музеи','die Museen'],['das Thema','die Them<em>en</em>','темы','die Themen'],['das Praktikum','die Praktik<em>a</em>','стажировки','die Praktika'],['das Visum','die Vis<em>a</em>','визы','die Visa']], j:'Приехали со своим plural. Как туристы со своей едой.'}
+    ];
+    var envs = $$('#envs .env'), out = $('#letter'); if(!out) return;
+    function open(i, anim){
+      envs.forEach(function(e,k){ e.classList.toggle('act', k===i); if(k===i) e.classList.add('open'); });
+      var l = L[i];
+      out.innerHTML = '<p class="lk">'+l.k+'</p><h3 class="lh brush">'+l.h+'</h3><div class="pairs">' +
+        l.p.map(function(p){ return '<div><span>'+(p[0]==='—'?'':p[0]+' → ')+p[1]+'<small>'+p[2]+'</small></span><button class="say" type="button" data-say="'+p[3]+'" aria-label="Послушать">'+VOL+'</button></div>'; }).join('') +
+        '</div><p class="joke">'+l.j+'</p>';
+      if(anim && G && !reduce){ G.fromTo(out.parentNode, {y:50, rotation:3}, {y:0, rotation:0, duration:.7, ease:'back.out(1.8)'}); G.from($$('.pairs>div', out), {x:-30, duration:.5, ease:'back.out(2)', stagger:.08}); }
+    }
+    envs.forEach(function(e,k){ e.onclick = function(){ open(k, true); }; });
+    open(0, false);
+  })();
+
+  /* ---------- room ---------- */
+  (function(){
+    var R = {
+      ballon:['der Ballon','die Ballons','-s','Гость из французского. Получает -s, как в английском.'],
+      bett:['das Bett','die Betten','-en','Средний род, а ведёт себя как женщина. Таких мало: Bett, Auge, Ohr, Hemd.'],
+      kissen:['das Kissen','die Kissen','Ø','На -en. Тихоня. Меняется только артикль.'],
+      teddy:['der Teddy','die Teddys','-s','Кончается на -y. Значит -s. Без вариантов.'],
+      brief:['der Brief','die Briefe','-e','Обычный мужчина. Получает -e. Без пуговок.'],
+      buch:['das Buch','die Bücher','-er + ü','Клуб -er. Пуговки сверху обязательно.'],
+      blume:['die Blume','die Blumen','-n','Женщина на -e. Хватает одной n.'],
+      kuchen:['der Kuchen','die Kuchen','Ø','На -en. Ничего не добавляем. Как Brötchen.'],
+      kerze:['die Kerze','die Kerzen','-n','Женщина на -e. Просто -n.'],
+      knopf:['der Knopf','die Knöpfe','-e + ö','Короткий мужчина. -e и пуговки. Пуговицы с пуговками.'],
+      schmetterling:['der Schmetterling','die Schmetterlinge','-e','Суффикс -ling всегда даёт -e.'],
+      socke:['die Socke','die Socken','-n','Женский род, -n. В Австрии говорят der Socken, но plural тот же.']
+    };
+    var svg = $('#roomSvg'); if(!svg) return;
+    var objs = $$('.obj', svg), pair = $('#rPair'), rule = $('#rRule'), sb = $('#rSay'), cnt = $('#rCount'), fd = $('#rDots'), got = {}, n = 0, card = $('#rcard').parentNode;
+    fd.innerHTML = objs.map(function(){ return '<i></i>'; }).join('');
+    function show(o){
+      var d = R[o.dataset.o]; if(!d) return;
+      pair.innerHTML = d[0] + '<span class="ar">→</span>' + d[1];
+      rule.innerHTML = '<span class="tag f">' + d[2] + '</span>' + d[3];
+      sb.hidden = false; sb.dataset.say = d[0] + '. ' + d[1];
+      _say(d[0] + '. ' + d[1]);
+      if(!got[o.dataset.o]){ got[o.dataset.o] = 1; n++; o.classList.add('got'); }
+      cnt.textContent = n === objs.length ? 'Все 12. Ты настоящий охотник за plural' : 'Найдено ' + n + ' из ' + objs.length;
+      $$('i', fd).forEach(function(x,k){ x.classList.toggle('on', k < n); });
+      if(G && !reduce){
+        G.fromTo(o, {scale:.86, transformOrigin:'50% 50%'}, {scale:1, duration:.8, ease:'elastic.out(1,.35)'});
+        G.fromTo(card, {y:16, rotation:-2}, {y:0, rotation:0, duration:.6, ease:'back.out(2.5)'});
+        G.fromTo(pair, {scale:.7}, {scale:1, duration:.6, ease:'back.out(3)'});
+        if(n === objs.length) confetti(card, 40);
+      }
+    }
+    objs.forEach(function(o){
+      o.addEventListener('click', function(){ show(o); });
+      o.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); show(o); } });
+    });
+  })();
+
+  /* ---------- confetti (buttons) ---------- */
+  function confetti(host, k){
+    if(!G || reduce) return;
+    var colors = ['#E2531D','#F2B33D','#5A8ED2','#7D9442','#F29EA6','#FFFBF2'];
+    for(var i=0;i<k;i++){
+      var c = document.createElement('i'); c.className = 'conf'; c.style.background = colors[i%colors.length]; host.appendChild(c);
+      G.fromTo(c, {x:0, y:0, scale:rnd(.6,1.3)}, {x:rnd(-220,220), y:rnd(-240,140), rotation:rnd(-360,360), opacity:0, duration:rnd(1,1.9), ease:'power3.out', onComplete:(function(el){ return function(){ el.remove(); }; })(c)});
+    }
+  }
+
+  /* ---------- flash buttons ---------- */
+  (function(){
+    var C = [
+      ['die Frau','die Frauen','женский род → -en'],['der Hund','die Hunde','мужчина, один слог → -e'],['das Kind','die Kinder','клуб -er'],
+      ['die Katze','die Katzen','на -e → -n'],['das Kino','die Kinos','на -o → -s'],['der Feigling','die Feiglinge','-ling → -e'],
+      ['das Hündchen','die Hündchen','-chen → ничего'],['die Mama','die Mamas','на -a → -s'],['der Student','die Studenten','-ent → -en'],['das Kabel','die Kabel','-el → ничего']
+    ];
+    var cols = [['#E2531D',0],['#5A8ED2',0],['#7D9442',0],['#F29EA6',1],['#FFFBF2',1],['#D8451B',0],['#2B211B',0],['#F2B33D',1],['#5A8ED2',0],['#E2531D',0]];
+    var host = $('#fcs'); if(!host) return;
+    host.innerHTML = C.map(function(c,i){
+      return '<button class="fc" type="button" data-i="'+i+'" aria-label="'+c[0]+'. Нажми, чтобы увидеть множественное число"><span class="fci">' +
+        '<span class="fcf'+(cols[i][1]?' dk':'')+'" style="--c:'+cols[i][0]+'"><b class="brush">'+c[0].split(' ')[1]+'</b><small>'+c[0].split(' ')[0]+'</small></span>' +
+        '<span class="fcb"><b class="brush">'+c[1].split(' ')[1]+'</b><small>'+c[2]+'</small></span></span></button>';
+    }).join('');
+    var seen = {}, cnt = $('#fcount');
+    $$('.fc', host).forEach(function(b){
+      b.onclick = function(){
+        b.classList.toggle('on');
+        var i = +b.dataset.i;
+        if(b.classList.contains('on')){ _say(C[i][0] + '. ' + C[i][1]); seen[i] = 1; }
+        var k = Object.keys(seen).length;
+        cnt.textContent = k === C.length ? 'Все 10 открыты. Теперь закрой и назови по памяти' : 'Открыто ' + k + ' из ' + C.length;
+      };
+    });
+  })();
+
+  /* ---------- quiz ---------- */
+  (function(){
+    var Q = [
+      {q:'das Kind → die ___', o:['Kinds','Kinder','Kinde'], c:1, s:'das Kind. die Kinder', x:'Kind из клуба -er. Его просто знаешь в лицо: die Kinder.'},
+      {q:'Zwei ___, bitte.', h:'Булочки в пекарне. Как у меня в первую неделю.', o:['Brötchens','Brötchen','Brötchenen'], c:1, s:'Zwei Brötchen, bitte.', x:'-chen всегда даёт ноль. Zwei Brötchen. Продавщица гордится тобой.'},
+      {q:'die Zeitung → die ___', o:['Zeitunge','Zeitungs','Zeitungen'], c:2, s:'die Zeitung. die Zeitungen', x:'-ung всегда даёт -en. Женский род, без исключений.'},
+      {q:'der Stuhl → die ___', o:['Stuhle','Stühle','Stühler'], c:1, s:'der Stuhl. die Stühle', x:'Короткий мужчина: -e. И сверху пуговки: u → ü.'},
+      {q:'das Handy → die ___', o:['Handys','Handies','Händy'], c:0, s:'das Handy. die Handys', x:'Кончается на -y. Значит -s. Никаких -ies, это не английский.'},
+      {q:'die Lehrerin → die ___', o:['Lehrerinen','Lehrerins','Lehrerinnen'], c:2, s:'die Lehrerin. die Lehrerinnen', x:'-in превращается в -innen. Две n. Легко пропустить, когда пишешь быстро.'}
+    ];
+    var qz = $('#qz'), wrapq = $('#qzw'), qi = 0, res = [];
+    if(!qz) return;
+    function bar(){ return '<div class="qbar">' + Q.map(function(_,i){ return '<i class="' + (res[i]===true?'ok':res[i]===false?'bad':i===qi?'cur':'') + '"></i>'; }).join('') + '</div>'; }
+    function drawQ(){
+      var it = Q[qi];
+      qz.innerHTML = bar() + '<p class="qn">Вопрос ' + (qi+1) + ' из ' + Q.length + '</p>' +
+        '<p class="qq brush">' + it.q.replace('___','<u id="blank">___</u>') + '</p>' + (it.h ? '<p class="qh">'+it.h+'</p>' : '<p class="qh">Выбери форму множественного числа.</p>') +
+        '<div class="qo">' + it.o.map(function(o,i){ return '<button type="button" data-i="'+i+'">'+o+'</button>'; }).join('') + '</div>' +
+        '<div class="qx"><svg class="ic"><use href="#i-brain"/></svg><span>Не подглядывай в шпаргалку.</span></div>';
+      $$('.qo button', qz).forEach(function(b){ b.onclick = function(){ answer(+b.dataset.i); }; });
+      if(G && !reduce) G.from($$('.qo button', qz), {y:20, scale:.9, duration:.5, ease:'back.out(2)', stagger:.06});
+    }
+    function answer(i){
+      var it = Q[qi], ok = i===it.c; res[qi] = ok;
+      $$('.qo button', qz).forEach(function(b){ b.disabled = true; var k = +b.dataset.i; if(k===it.c) b.classList.add('ok'); else if(k===i) b.classList.add('bad'); });
+      var chosen = $$('.qo button', qz)[i];
+      if(G && !reduce){ ok ? G.fromTo(chosen, {scale:.85}, {scale:1, duration:.6, ease:'elastic.out(1,.4)'}) : G.fromTo(chosen, {x:-10}, {x:0, duration:.5, ease:'elastic.out(1.2,.2)'}); }
+      $('#blank').textContent = it.o[it.c];
+      var qx = $('.qx', qz); qx.classList.toggle('bad', !ok);
+      qx.innerHTML = '<svg class="ic"><use href="#i-' + (ok?'circle-check':'circle-x') + '"/></svg><span>' + (ok ? '<b>Верно.</b> ' : '<b>Мимо.</b> ') + it.x + '</span>';
+      if(ok) confetti(wrapq, 12);
+      _say(it.s);
+      $('.qbar', qz).outerHTML = bar();
+      var nb = document.createElement('button'); nb.className = 'btn o qnext'; nb.type = 'button';
+      nb.innerHTML = qi < Q.length-1 ? 'Дальше <svg class="ic"><use href="#i-arrow-right"/></svg>' : 'Результат <svg class="ic"><use href="#i-trophy"/></svg>';
+      nb.onclick = function(){ qi++; qi < Q.length ? drawQ() : done(); };
+      qz.appendChild(nb); nb.focus({preventScroll:true});
+    }
+    function done(){
+      var s = res.filter(Boolean).length;
+      var msg = s===6 ? 'Шесть из шести. Можешь идти в Spar за булочками.' : s>=4 ? 'Почти. Перечитай блок про пять детей. Там все и путаются.' : 'Нормально. Первый раз у всех так. Пролистай шпаргалку и попробуй ещё раз.';
+      var link = AD ? '<a class="btn ghost" href="#platform">Ещё 309 тем</a>' : '<a class="btn ghost" href="#cheat">Шпаргалка</a>';
+      qz.innerHTML = bar() + '<div class="qres"><div class="score brush">'+s+'/6</div><p class="qq brush" style="font-size:30px">'+msg+'</p>' +
+        '<div class="cta-row"><button type="button" class="btn o" id="again"><svg class="ic"><use href="#i-repeat"/></svg> Ещё раз</button>' + link + '</div></div>';
+      $('#again').onclick = function(){ qi = 0; res = []; drawQ(); };
+      if(G && !reduce){ G.from('.qres .score', {scale:.3, rotation:-20, duration:1, ease:'elastic.out(1,.4)'}); confetti(wrapq, s*8); }
+    }
+    drawQ();
+  })();
+
+  /* ---------- videos ---------- */
+  var pio = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ var v = en.target; if(v.dataset.poster) v.poster = v.dataset.poster; pio.unobserve(v); } }); }, {rootMargin:'900px 0px'}) : null;
+  $$('video.vid').forEach(function(v){
+    pio ? pio.observe(v) : (v.poster = v.dataset.poster);
+    whenVisible(v, function(){ try{ v.preload = 'auto'; var p = v.play(); p && p.catch(function(){}); }catch(e){} }, function(){ try{ v.pause(); }catch(e){} });
+  });
+
+  /* ---------- sticky dock (ad) ---------- */
+  var dock = $('#dock'), priceSec = $('.prices');
+  if(dock && priceSec && 'IntersectionObserver' in window){
+    var pastHero = false, atPrice = false;
+    function upd(){ var s = pastHero && !atPrice; dock.classList.toggle('show', s); dock.setAttribute('aria-hidden', !s); $('a', dock).tabIndex = s ? 0 : -1; }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ pastHero = !en.isIntersecting && en.boundingClientRect.top < 0; upd(); }); }).observe($('.hero'));
+    new IntersectionObserver(function(es){ es.forEach(function(en){ atPrice = en.isIntersecting; upd(); }); }).observe(priceSec);
+  }
+
+  if(G){ window.addEventListener('load', function(){ ScrollTrigger.refresh(); }); if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); }); }
+}
+if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', plInit); else plInit();
+</script>
+
+</body>
+</html>
